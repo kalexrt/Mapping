@@ -1,0 +1,795 @@
+Field,Ed-Fi Entity,Ed-Fi Attribute,Description,Ed-Fi Notes,Sample Data,Format,Required Field,Logic,Remarks
+STUDENT_ID,Student,StudentUniqueId,Unique identifier assigned to each student.,,1,,,,
+SAC_TERM,Session,Term,"Academic term (e.g., Fall 2024) associated with the course enrollment.",,2024FA,,,,
+DUAL_CREDIT_ENRL,StudentSectionAssociation.,DualCredit,Indicates if the student is enrolled in a dual credit course.,,DC,DC or Null,,,
+SAC_COURSE_NAME,Course,courseTitle,Full name or title of the course.,,EDUC-1300,,,,
+SECTION_SECTION_NUMBER,Section,SectionName,Code identifying the specific course section.,,21G08,,,,
+SECTION_TITLE,Section,sectionIdentifier,Title or description of the specific course section.,,Learning Framework,,,,
+SECTION_SCHEDULE_TYPE_DESC,Section,"EducationalEnvironment or 
+MediumOfInstruction","Description of the course's schedule type (e.g., Lecture, Lab, Online).",,Early College,"SECTION_SCHEDULE_TYPE_DESC
+ Blended - 50% Or Less Online
+ Collegiate Academy
+ Day
+ Distance Learning
+ Dual Credit
+ Dual Credit Distance Learning
+ Early College
+ Early College Dist Learning
+ Flex - Day
+ Flex - Night
+ Flex Blend
+ Flex Distance Learning
+ Flex Hybrid
+ Hybrid - 51% to 84% Online
+ Night
+ Weekend",,,
+SECTION_COURSE_TYPE_DESC,course,description,"Description of the course type (e.g., Core, Elective).",,General Academic,"SECTION_COURSE_TYPE_DESC
+ CE - WECM
+ CE workforce-Not Funded
+ General Academic
+ Regular Technical
+ Technical - WECM",,,
+SAC_REG_CRED,coursetranscript,attemptedcredits,Number of credits the student registered for.,,300,,,,
+SAC_CMPL_CRED,coursetranscript,earnedcredits,Number of credits the student completed.,,300,,,,
+SECTION_CEUS,section,custom: ceusavailable,Continuing Education Units assigned to the course section.,,,,,,
+SAC_CEUS,coursetranscript,custom: ceusattempted,Continuing Education Units the student registered for.,,,,,,
+SAC_CMPL_CEUS,coursetranscript,custom: ceusearned,Continuing Education Units the student completed.,,,,,,
+PROGRESS_GRADE_1,grade,lettergradeearned,First reporting progress or midterm grade reported.,,A,Any kind of codes,,,
+PROGRESS_GRADE_2,grade,lettergradeearned,Second reporting progress or midterm grade reported.,,A,,,,
+SAC_GRADE,coursetranscript,finallettergradeearned,Final grade the student received.,,A,"SAC_GRADE GRADE_DESC
+ A Excellent
+ B Good
+ B# Honors
+ C Average
+ CP Completed
+ CR Credit (C Or Better)
+ D Poor
+ F Failing
+ N Failing
+ NC Not Completed
+ NR Not Reported by Instructor
+ W Withdrawn
+ WQ Count in 6DROP
+ WX Progress-Reenrollment Required",,,
+GRADE_DESC,coursetranscript,custom: finalgradeearneddesc,"Description of the final grade (e.g., A = Excellent, F = Failing).",,Excellent,,,,
+SAC_CURRENT_STATUS,studentsectionassociation,custom: currentenrollmentstatus,"Current enrollment status of the student (e.g., Enrolled, Dropped).",,R,"SAC_CURRENT_STATUS EXTERNAL_REPRESENTATION
+ A Add
+ C Cancelled
+ D Dropped
+ NC Noncourse Equivalency
+ R New
+ TR Transfer Equiv Eval
+ W Withdrawn
+ X Drop Before 1st Class Day",,,
+EXTERNAL_REPRESENTATION,coursetranscript,coursetitle,"How the course or grade is displayed externally (e.g., on transcripts).",,New,,,,
+SAC_CURRENT_STATUS_DATE,course,custom: currentstatusdate,Date when the current course status was last updated.,,8/20/2024 0:00,,,,
+SECTION_CENSUS_DATE,studentsectionassociation,begindate,Official date used for enrollment reporting and funding (12th day),,9/9/2024 0:00,,,,
+ON_TRANSCRIPT,studentsectionassociation,custom: showontranscript,Indicates if the course appears on the student’s official transcript.,,Y,,,,
+SAC_SCHOOL_ID,school,schoolid,Identifier for the school or campus offering the course.,,EDU,,,,
+SECTION_WEEKS,section,custom,Duration of the course in weeks.,,16,,,,
+SECTION_ACAD_LEVEL,section,custom,"Academic level of the course (e.g., Undergraduate, Graduate).",,CR,,,,
+SECTION_CRED_TYPE,section,custom,"Code representing the type of credit (e.g., Semester, Quarter).",,I,,,,
+SECTION_CRED_TYPE_DESC,section,custom,Description of the type of credit.,,DCCCD College Level,,,,
+CHECKTHENAME,custom,custom,Field used for name verification or system matching.,,EDUC-1300,,,,
+CORE_STUDENT_ID,,,Core or central student ID used across systems.,,,,,,
+SECTION_NAME,Section,sectionname,Official name or identifier of the course section.,,,,,,
+SHORT_TITLE,Course,courseshortname,Abbreviated course title.,,,,,,
+AREA,Course,department,Academic area or department offering the course.,,,,,,
+CODE,Course,coursecode,"Course code (often subject + number, e.g., MATH101).",,,,,,
+SUBJECT_ID,Course,academicsubject,"Identifier for the subject area (e.g., MATH, ENGL).",,,,,,
+TERM_ID,session,termdescriptorid,Unique identifier for the academic term.,,,,,,
+CREDITS,section,availablecredits,Number of academic credits assigned to the course.,,,,,,
+dcccd id,student,dcccdid,Unique identifier assigned to a student within the Dallas County Community College District system.,A unique alphanumeric code assigned to a student.,1,String,Yes,,
+DEGREE_TYPE,Diploma,DiplomaDescription,"Type of degree or credential awarded (e.g., Associate, Certificate).",The description of diploma given to the student for accomplishments.,AS,String,No,max length: 80,
+PROGRAM,Program,ProgramName,Academic program or major the student completed.,"The formal name of the program of instruction, training, services, or benefits available through federal, state, or local agencies.",AS.SCIENCE,String,No,,
+TITLE,Credential,CertificationTitle,Full title of the awarded degree or credential.,The title of the certification obtained by the educator.,Associate of Science,String,No,,
+CIP,CTEProgramService,CIPCode,Classification of Instructional Programs (CIP) code for the program of study.,Number and description of the CIP code associated with the student's CTE program.,240.102,String (CIP format),No,,
+TERM,StudentAcademicRecord,Term,Academic term in which the degree was awarded.,The term for the session during the school year.,2021SP,Descriptor,Yes,,
+CRED_DESC,,Custom mapping,"Description of the type or level of credit (e.g., College Credit, Continuing Ed).",Type of credit earned,Associate of Science,Descriptor,No,,
+DEGREE_DATE,Date,CredentialStatusDate,Official date when the degree or credential was awarded.,"The month, day, and year on which the credential status was effective.",5/13/2021 0:00,Date (YYYY-MM-DD),Yes,,
+LOCATION_ID,EducationOrganization,EducationOrganizationId,Identifier of the college or campus where the degree was granted.,The identifier assigned to an education organization.,100,Integer,Yes,,There could be campus identifiers. Now they are one institution - Dallas College
+DIPLOMA_NAME,,,Student’s name as it appears on the diploma.,"Name on diploma (no direct mapping, closest is preferred name)",First Last,String,Yes,,
+CREDENTIAL_GPA,StudentAcademicRecord,GradePointAverage,GPA calculated specifically for the awarded credential or program.,The grade point average for an individual computed as the grade points earned divided by the number of credits attempted.,3.344,Decimal (0.00–4.00),Yes,,
+STUDENT_ID,Student,StudentUniqueId,A unique identifier assigned to each student at Dallas College to track and manage their academic records across systems.,,1,,,,
+Completed,CourseTranscript,EarnedCredits,Indicates whether a student has successfully completed a specific course or requirement as part of their academic program.,,42,,,,
+Needed,,,Represents the courses or requirements still needed by the student to fulfill their degree or program requirements at Dallas College.,,0,,,,
+Communication,section,AvailableCredits,"Refers to courses or requirements related to enhancing communication skills, such as writing, speech, and language courses.",,6,,,,
+Mathematics,section,AvailableCredits,"Represents courses that fulfill the mathematics requirement, including algebra, calculus, statistics, and other math-related subjects.",,3,,,,
+Life and Physical Sciences,section,AvailableCredits,"Includes courses in the natural sciences, such as biology, chemistry, physics, and related disciplines at Dallas College.",,8,,,,
+Language Philosophy and Culture,section,AvailableCredits,"Refers to courses that focus on language, philosophy, and cultural studies, typically part of the humanities requirement.",,3,,,,
+Creative Arts,section,AvailableCredits,"Courses related to creative fields, including music, visual arts, theater, and other artistic disciplines offered at Dallas College.",,3,,,,
+American History,section,AvailableCredits,"Refers to courses that cover the history and development of the United States, including key events, movements, and figures.",,6,,,,
+Government Political Science,section,AvailableCredits,"Includes courses on the study of government, political systems, public policy, and political theory, typically required for political science programs.",,6,,,,
+Social and Behavioral Sciences,section,AvailableCredits,"Encompasses courses in fields such as sociology, psychology, economics, and anthropology, focusing on human behavior and societal issues.",,3,,,,
+Component Area Option,section,AvailableCredits,"Elective courses that can fulfill the general education requirements at Dallas College, providing students flexibility in course selection.",,4,,,,
+Core Complete,GraduationPlan,graduationPlanType,Indicates whether a student has completed all the core curriculum requirements required for their degree or program at Dallas College.,,Yes,,,"graduationPlanTypeDescriptor: Specifies the type of graduation plan (e.g., ""Core Curriculum"").",
+STUDENT_ID,Student,StudentUniqueId,Unique identifier assigned to each student.,,1,,,,
+ENROLLED_2018FA,rdhenrollments,ENROLLED_2018FA,Enrollment status for Fall 2018.,,,(Enrolled/Not Enrolled),,,
+ENROLLED_2019SP,rdhenrollments,ENROLLED_2019SP,Enrollment status for Spring 2019.,,,,,,
+ENROLLED_2019SU,rdhenrollments,ENROLLED_2019SU,Enrollment status for Summer 2019.,,,,,,
+ENROLLED_2019FA,rdhenrollments,ENROLLED_2019FA,Enrollment status for Fall 2019.,,NOT ENROLLED,,,,
+ENROLLED_2020SP,rdhenrollments,ENROLLED_2020SP,Enrollment status for Spring 2020.,,NOT ENROLLED,,,,
+ENROLLED_2020SU,rdhenrollments,ENROLLED_2020SU,Enrollment status for Summer 2020.,,NOT ENROLLED,,,,
+ENROLLED_2020FA,rdhenrollments,ENROLLED_2020FA,Enrollment status for Fall 2020.,,NOT ENROLLED,,,,
+ENROLLED_2021SP,rdhenrollments,ENROLLED_2021SP,Enrollment status for Spring 2021.,,NOT ENROLLED,,,,
+ENROLLED_2021SU,rdhenrollments,ENROLLED_2021SU,Enrollment status for Summer 2021.,,NOT ENROLLED,,,,
+ENROLLED_2021FA,rdhenrollments,ENROLLED_2021FA,Enrollment status for Fall 2021.,,NOT ENROLLED,,,,
+ENROLLED_2022SP,rdhenrollments,ENROLLED_2022SP,Enrollment status for Spring 2022.,,ENROLLED,,,,
+ENROLLED_2022SU,rdhenrollments,ENROLLED_2022SU,Enrollment status for Summer 2022.,,NOT ENROLLED,,,,
+ENROLLED_2022FA,rdhenrollments,ENROLLED_2022FA,Enrollment status for Fall 2022.,,NOT ENROLLED,,,,
+ENROLLED_2023SP,rdhenrollments,ENROLLED_2023SP,Enrollment status for Spring 2023.,,NOT ENROLLED,,,,
+ENROLLED_2023SU,rdhenrollments,ENROLLED_2023SU,Enrollment status for Summer 2023.,,NOT ENROLLED,,,,
+ENROLLED_2023FA,rdhenrollments,ENROLLED_2023FA,Enrollment status for Fall 2023.,,ENROLLED,,,,
+ENROLLED_2024SP,rdhenrollments,ENROLLED_2024SP,Enrollment status for Spring 2024.,,ENROLLED,,,,
+ENROLLED_2024SU,rdhenrollments,ENROLLED_2024SU,Enrollment status for Summer 2024.,,NOT ENROLLED,,,,
+ENROLLED_2024FA,rdhenrollments,ENROLLED_2024FA,Enrollment status for Fall 2024.,,NOT ENROLLED,,,,
+ENROLLED_2025SP,rdhenrollments,ENROLLED_2025SP,Enrollment status for Spring 2025.,,NOT ENROLLED,,,,
+DROPPED_ALL_DATE_2025SP,rdhenrollments,DROPPED_ALL_DATE_2025SP,Date student dropped all courses in Spring 2025.,,,,,,
+MOST_RECENT_DROPPED_CREDIT_DATE,StudentSectionAssociation,endDate,Most recent date a student dropped a credit course.,,,,,,
+AWARD_ID,diploma,DiplomaType,Identifier for an award or credential earned.,,NO PROM8 AWARD,,,,
+MULTIPLE_COLLEGE_ATTENDING_FLAG,rdhstudentindicator,MULTIPLE_COLLEGE_ATTENDING_FLAG,Indicates if the student is attending multiple colleges/Campus,,,Y/N,,,
+LOCATIONS,	StudentSchoolAssociation,location,Locations or campuses where the student is enrolled.,,,Numerical values,,,
+EARLIEST_STATUS_DATE_2025SP,rdhenrollments,EARLIEST_STATUS_DATE_2025SP,Earliest status update date for Spring 2025.,,,"When they strted enrollment cycle, when they first show up",,,
+DROPPED_CREDIT_AFTER_CENSUS_FLAG_2025SP,rdhenrollments,DROPPED_CREDIT_AFTER_CENSUS_FLAG_2025SP,Indicates if the student dropped credit hours after census in Spring 2025.,,,Have they dropped a course during the semester,,,
+TAKING_DEV_CREDS_2025SP,rdhenrollments,TAKING_DEV_CREDS_2025SP,Indicates if the student is taking developmental credits in Spring 2025.,,N,Math or english develomental courses,,,
+BH_CRED_2025SP,rdhenrollments,BH_CRED_2025SP,Credit hours taken at BH campus in Spring 2025.,,,Credit hours,,,
+CV_CRED_2025SP,rdhenrollments,CV_CRED_2025SP,Credit hours taken at CV campus in Spring 2025.,,,,,,
+EF_CRED_2025SP,rdhenrollments,EF_CRED_2025SP,Credit hours taken at EF campus in Spring 2025.,,,,,,
+EC_CRED_2025SP,rdhenrollments,EC_CRED_2025SP,Credit hours taken at EC campus in Spring 2025.,,,,,,
+MV_CRED_2025SP,rdhenrollments,MV_CRED_2025SP,Credit hours taken at MV campus in Spring 2025.,,,,,,
+NL_CRED_2025SP,rdhenrollments,NL_CRED_2025SP,Credit hours taken at NL campus in Spring 2025.,,,,,,
+RL_CRED_2025SP,rdhenrollments,RL_CRED_2025SP,Credit hours taken at RL campus in Spring 2025.,,,,,,
+TOT_ENR_CRH,rdhenrollments,TOT_ENR_CRH,Total enrolled credit hours (Current terms).,,,,,,
+TOT_CRH_AFTER_DROP,rdhenrollments,TOT_CRH_AFTER_DROP,Total credit hours after drops (Current terms).,,,"Carrying forward after dropping the course, credit hours accumulation after drop",,,
+2025SP_CE_COURSE_COUNT,rdhenrollments,2025SP_CE_COURSE_COUNT,Number of Continuing Education (CE) courses taken in Spring 2025.,,,Number - (1 to 4),,,
+2018FA_DEV_CREDS,rdhenrollments,2018FA_DEV_CREDS,Developmental credits earned in Fall 2018.,,,,,,
+2018FA_COLLEGE_CREDS,rdhenrollments,2018FA_COLLEGE_CREDS,College-level credits earned in Fall 2018.,,,,,,
+2019SP_DEV_CREDS,rdhenrollments,2019SP_DEV_CREDS,Developmental credits earned in Spring 2019.,,,,,,
+2019SP_COLLEGE_CREDS,rdhenrollments,2019SP_COLLEGE_CREDS,College-level credits earned in Spring 2019.,,,,,,
+2019SU_DEV_CREDS,rdhenrollments,2019SU_DEV_CREDS,Developmental credits earned in Summer 2019.,,,,,,
+2019SU_COLLEGE_CREDS,rdhenrollments,2019SU_COLLEGE_CREDS,College-level credits earned in Summer 2019.,,,,,,
+2019FA_DEV_CREDS,rdhenrollments,2019FA_DEV_CREDS,Developmental credits earned in Fall 2019.,,,,,,
+2019FA_COLLEGE_CREDS,rdhenrollments,2019FA_COLLEGE_CREDS,College-level credits earned in Fall 2019.,,,,,,
+2020SP_DEV_CREDS,rdhenrollments,2020SP_DEV_CREDS,Developmental credits earned in Spring 2020.,,,,,,
+2020SP_COLLEGE_CREDS,rdhenrollments,2020SP_COLLEGE_CREDS,College-level credits earned in Spring 2020.,,,,,,
+2020SU_DEV_CREDS,rdhenrollments,2020SU_DEV_CREDS,Developmental credits earned in Summer 2020.,,,,,,
+2020SU_COLLEGE_CREDS,rdhenrollments,2020SU_COLLEGE_CREDS,College-level credits earned in Summer 2020.,,,,,,
+2020FA_DEV_CREDS,rdhenrollments,2020FA_DEV_CREDS,Developmental credits earned in Fall 2020.,,,,,,
+2020FA_COLLEGE_CREDS,rdhenrollments,2020FA_COLLEGE_CREDS,College-level credits earned in Fall 2020.,,,,,,
+2021SP_DEV_CREDS,rdhenrollments,2021SP_DEV_CREDS,Developmental credits earned in Spring 2021.,,,,,,
+2021SP_COLLEGE_CREDS,rdhenrollments,2021SP_COLLEGE_CREDS,College-level credits earned in Spring 2021.,,,,,,
+2021SU_DEV_CREDS,rdhenrollments,2021SU_DEV_CREDS,Developmental credits earned in Summer 2021.,,,,,,
+2021SU_COLLEGE_CREDS,rdhenrollments,2021SU_COLLEGE_CREDS,College-level credits earned in Summer 2021.,,,,,,
+2021FA_DEV_CREDS,rdhenrollments,2021FA_DEV_CREDS,Developmental credits earned in Fall 2021.,,,,,,
+2021FA_COLLEGE_CREDS,rdhenrollments,2021FA_COLLEGE_CREDS,College-level credits earned in Fall 2021.,,,,,,
+2022SP_DEV_CREDS,rdhenrollments,2022SP_DEV_CREDS,Developmental credits earned in Spring 2022.,,,,,,
+2022SP_COLLEGE_CREDS,rdhenrollments,2022SP_COLLEGE_CREDS,College-level credits earned in Spring 2022.,,7,,,,
+2022SU_DEV_CREDS,rdhenrollments,2022SU_DEV_CREDS,Developmental credits earned in Summer 2022.,,,,,,
+2022SU_COLLEGE_CREDS,rdhenrollments,2022SU_COLLEGE_CREDS,College-level credits earned in Summer 2022.,,,,,,
+2022FA_DEV_CREDS,rdhenrollments,2022FA_DEV_CREDS,Developmental credits earned in Fall 2022.,,,,,,
+2022FA_COLLEGE_CREDS,rdhenrollments,2022FA_COLLEGE_CREDS,College-level credits earned in Fall 2022.,,,,,,
+2023SP_DEV_CREDS,rdhenrollments,2023SP_DEV_CREDS,Developmental credits earned in Spring 2023.,,,,,,
+2023SP_COLLEGE_CREDS,rdhenrollments,2023SP_COLLEGE_CREDS,College-level credits earned in Spring 2023.,,,,,,
+2023SU_DEV_CREDS,rdhenrollments,2023SU_DEV_CREDS,Developmental credits earned in Summer 2023.,,,,,,
+2023SU_COLLEGE_CREDS,rdhenrollments,2023SU_COLLEGE_CREDS,College-level credits earned in Summer 2023.,,,,,,
+2023FA_DEV_CREDS,rdhenrollments,2023FA_DEV_CREDS,Developmental credits earned in Fall 2023.,,,,,,
+2023FA_COLLEGE_CREDS,rdhenrollments,2023FA_COLLEGE_CREDS,College-level credits earned in Fall 2023.,,9,,,,
+2024SP_DEV_CREDS,rdhenrollments,2024SP_DEV_CREDS,Developmental credits earned in Spring 2024.,,,,,,
+2024SP_COLLEGE_CREDS,rdhenrollments,2024SP_COLLEGE_CREDS,College-level credits earned in Spring 2024.,,6,,,,
+2024SU_DEV_CREDS,rdhenrollments,2024SU_DEV_CREDS,Developmental credits earned in Summer 2024.,,,,,,
+2024SU_COLLEGE_CREDS,rdhenrollments,2024SU_COLLEGE_CREDS,College-level credits earned in Summer 2024.,,,,,,
+2024FA_DEV_CREDS,rdhenrollments,2024FA_DEV_CREDS,Developmental credits earned in Fall 2024.,,,,,,
+2024FA_COLLEGE_CREDS,rdhenrollments,2024FA_COLLEGE_CREDS,College-level credits earned in Fall 2024.,,,,,,
+CURRENT_ACAD_STANDING,studentacademicrecord,currentacademicstanding,"Student’s current academic standing (e.g., Good, Probation).",,GOOD,"Probation 1, Probation 2..... etc",,,
+AT_RISK_FLAG,rdhstudentindicator,atriskflag,Indicates if the student is flagged as academically at risk.,,NO,,,,
+CUMULATIVE_GPA1,rdhenrollments,CUMULATIVE_GPA1,"Cumulative GPA in including develomental education courses (Math, english)",,2.52,,,,
+CUMULATIVE_GPA1_CREDS,rdhenrollments,CUMULATIVE_GPA1_CREDS,Total credits used in GPA1 calculation.,,25,,,,
+CUMULATIVE_GPA2,rdhenrollments,CUMULATIVE_GPA2,"Cumulative GPA ( Doesn't include develomental education courses (Math, english)",,2.52,,,,
+CUMULATIVE_GPA2_CREDS,rdhenrollments,CUMULATIVE_GPA2_CREDS,Total credits used in GPA2 calculation.,,25,,,,
+RACE,studenteducationorganization,race,Student's reported race.,,Black/African American,,,,
+ETHNICITY,studenteducationorganization,ETHNICITY,Student's reported ethnicity.,,Not Hispanic,,,,
+RACE/ETHNICITY,studenteducationorganization,RACE/ETHNICITY,Combined race/ethnicity category.,,Black/African American,,,,
+GENDER,studenteducationorganization,SexDescriptor,Student's gender.,,F,,,,
+FIRST_NAME,student,firstname,Student's first name.,,First1,,,,
+LAST_NAME,student,lastsurname,Student's last name.,,Last1,,,,
+ADDRESS_LINE1,studenteducationorganization,addressline1,First line of the student’s mailing address.,,Address 1,,,,
+ADDRESS_LINE2,studenteducationorganization,addressline2,Second line of the student’s mailing address (if any).,,,,,,
+CITY,studenteducationorganization,city,City of the student’s address.,,Dallas,,,,
+STATE,studenteducationorganization,state,State of the student’s address.,,TX,,,,
+ZIP,studenteducationorganization,zip,ZIP code of the student’s address.,,75999,,,,
+PHONE_HOME,studenteducationorganization,phonehome,Student’s home phone number.,,555-111-2222,,,,
+PHONE_CELL,studenteducationorganization,phonecell,Student’s cell phone number.,,555-111-2222,,,,
+EMAIL,student,email,Student’s email address.,,1@student.dcccd.edu,,,,
+TITLE,diploma,diplomaTitle,"Title of the academic credential (e.g., Associate of Arts).",,Associate of Arts,,,,
+PROGRAM_ID,StudentProgramAssociation,programname,Unique identifier for the academic program.,,AA.ARTS,,,,
+PRIMARY_PROGRAM_OF_STUDY,studentcteprogramassociationcteprogram,primarycteprogramindicator,Indicates the student’s primary program of study.,,Y,,,,
+CIP,studentcteprogramassociationcteprogram,cipcode,Classification of Instructional Programs (CIP) code.,,240.102,,,,
+PATHWAY_TITLE,studentcteprogramassociationcteprogram,pathwaytitle,Title of the academic pathway.,,Education,"7 pathways in Dallas College, Student pick one of those pathways",,,
+PATHWAY_PROGRAM_TITLE,studentcteprogramassociationcteprogram,pathwayprogramtitle,Full title of the program within the pathway.,,,"STEM, business, healthcare, primary pathway programs, align of degree program",,,
+DUAL_CREDIT,StudentEducationOrganizationAssociation,dualcredit,Indicates if the student participated in dual credit courses.,,PREVIOUSLY DC,,,,
+FIRST_GEN_COLLEGE_STU,StudentEducationOrganizationAssociation,firstgencollegestu,Indicates if the student is a first-generation college student.,,DO NOT KNOW,,,,
+RESIDENCY,StudentEducationOrganizationAssociation,residency,"Residency classification (e.g., In-District, Out-of-District, Out of state)",,In District,Depends on promise eligibility,,,
+MATH_TSI_MET,StudentAssessment,AssessmentIdentifier,Indicates if student met Math TSI requirement.,,MET,,,,
+READ_TSI_MET,StudentAssessment,AssessmentIdentifier,Indicates if student met Reading TSI requirement.,,MET,,,,
+WRITE_TSI_MET,StudentAssessment,AssessmentIdentifier,Indicates if student met Writing TSI requirement.,,MET,,,,
+MENINGITIS_STATUS,studenthealth,immunizationtype,Status of the student’s meningitis vaccination.,,Not Met Meningitis Vaccine Req,,,,
+SRA_BESTLOC,studentschoolassociation,srabestloc,Best location/campus determined for student services.,,600,"Primary Campus say, Cedar valley)",,,
+SAP_STATUS,StudentEducationOrganizationAssociation,sapstatus,Satisfactory Academic Progress (SAP) status.,,OK,,,,
+RISING_STAR,StudentProgramAssociation,programname,Indicates if the student is part of the Rising Star program.,,,"Promise was derived from this, Rising star scholarship",,,
+CORE_COMPLETE_TERM,StudentProgramAssociation,corecompeleteterm,Term when student completed the core curriculum.,,,What term did they complete,,,
+SAC_PERSON_ID,StudentEducationOrganizationAssociation,StudentIdentificationCode,,"A coding scheme that is used for identification and record-keeping purposes by schools, social services, or other agencies to refer to a student.",1,Dallas college id - Always the same id,,,
+Prog1,StudentProgramAssociation,ProgramEvaluationStatusDescriptor,"The primary program or academic track a student is enrolled in at Dallas College, representing their main field of study or focus.",,On Track,"On Track, Off Track based on the grade (D or F, U, S )
+ Satisfactory, Unsatifactory",,Custom entity not standard EdFi entity,
+Prog2,StudentProgramAssociation,SecondaryProgramDescriptor,"The secondary program or academic track a student may be enrolled in, indicating a dual focus or an additional area of study.",,N/A,When no grade value -> N/A,,Custom entity not standard EdFi entity,
+FinalD,StudentAcademicRecord,AcademicProgressDescriptor,"The final decision or status regarding a student's academic progression, such as graduation eligibility, program completion, or other key milestones",,On Track,,,Custom entity not standard EdFi entity,
+CourseE,StudentSectionAssociation,courseStatusDescriptor,"The courses or educational components a student is enrolled in, indicating the specific subjects or classes they are taking within their program at Dallas College.",,On Track,,,Custom entity not standard EdFi entity,
+EID,Student,StudentIdentificationCode,Unique identifier assigned to each student in the education system.,,EID2025-440224-1,,,,
+High_School,School,NameOfInstitution,Name of the high school the student is currently attending or graduated from.,,Early College High School,,,,
+TEA_ID,EducationOrganizationIdentificationCode,IdentificationCode,,,57903010,,,,
+CEEB,EducationOrganizationIdentificationCode,CEEBCode,College Entrance Examination Board code used to identify high schools.,,440224,,,custom field,
+Student_ID,StudentEducationOrganizationAssociation,StudentIdentificationCode,Internal student identifier used by the high school or district.,,1,,,,
+TSDS_ID,Student,StudentUniqueId,Texas Student Data System unique identifier for the student.,,1,,,,
+First_Name,Student,FirstName,Student’s first name.,,First,,,,
+Middle_Name,Student,MiddleName,Student’s middle name (if provided).,,Middle,,,,
+Last_Name,Student,LastSurname,Student’s last name.,,Last,,,,
+Birthdate,Student,BirthDate,Student’s date of birth.,,38360,,,,
+Graduation_Year,StudentAcademicRecord,ProjectedGraduationDate,Expected or actual year of high school graduation.,,2025,,,,
+DCCCD_ID,StudentEducationOrganizationAssociation,StudentIdentificationCode,,,0,,,,
+Entry_Date,StudentSchoolAssociation,EntryDate,Date the student entered the Dallas College system or course.,,45516,,,,
+GPA,StudentAcademicRecord,GradePointAverageValue,Student’s Grade Point Average.,,2.87,,,,
+GPA_Scale,StudentAcademicRecord,GradePointAverageValue,"The scale used for calculating GPA (e.g., 4.0, 5.0).",,4,,,,
+FLS,LimitedEnglishProficiencyDescriptor,LimitedEnglishProficiencyDescriptor,Foreign Language Status (may indicate if student is classified as an ELL).,,FALSE,,,Use “English learner” or “Not an English learner”,
+Early_Grad,StudentAcademicRecord,EarlyGraduationIndicator,Flag indicating if the student graduated earlier than expected.,,FALSE,,,Custom entity,
+PTEC,StudentProgramAssociation,ProgramName,Pathways to Technology Early College High School flag.,,FALSE,,,,
+SeniorFlag,StudentEducationOrganizationAssociation,,Flag indicating if the student is in their senior (12th grade) year.,,FALSE,,,,
+EarlyCollegeHighSchoolFlag,StudentProgramAssociation,ProgramName,Flag indicating enrollment in an Early College High School program.,,FALSE,,,,
+EcoDisFlag,StudentEducationOrganizationAssociation,EconomicDisadvantaged,Economically Disadvantaged flag—indicates if student qualifies for economic aid.,,TRUE,,,,
+SpedFlag,StudentSpecialEducationProgramAssociation,SpecialEducationParticipationDescriptor,Special Education flag—indicates student receives SPED services.,,FALSE,,,custom entity,
+PreassessmentComplete,StudentAssementCollegeReadinessPreAssessmentComplete,,Indicates whether the student completed the required college readiness pre-assessment.,,FALSE,,,custom entity,
+PID,Student,StudentUniqueId,A unique identifier for a person or student,,1,Person ID/Similar to Student ID,,,
+I,Custom,,"Likely represents an indicator or status code, such as enrollment status or program participation.",,0,"Type of course 
+Developmental - 0 
+Regular,
+Transfer
+ Both",,,
+ID,Custom,,"A general identifier for the student, potentially used in various contexts like registration or course management.",,1,,,,
+CreditType,Custom,,"Specifies the type of credit earned or required for a course or program (eg: 
+- Developmental: Credits earned through courses aimed at developing foundational academic skills.
+- Regular: Credits earned through standard, degree-eligible academic courses.
+- Transfer: Credits transferred from another institution that count toward degree completion at the current institution.
+- Both: A combination of developmental and regular credits earned by the student.)",,Developmental,,,,
+PERSON_ID,Student,StudentUniqueId,A unique identifier assigned to each student at Dallas College,,1,,,,
+TRANSCRIPT_STATUS,StudentAcademicRecord,Custom,"Represents the current status of a student's transcript at Dallas College, reflecting the academic record's current state.",,OFFI,"OFFI(Official), NR (Not Reported)",,,
+TRANSCRIPT_DATE,StudentAcademicRecord,LastModifiedDate,The date on which the transcript was issued or last updated by Dallas College,,7/17/2020 0:00,,,,
+COMMENTS,StudentAcademicRecord,Custom,"Any relevant remarks or additional notes regarding the student's academic progress or record, feedback, or status updates from Dallas College.",,,,,,
+id,Student,StudentUniqueId,A unique identifier assigned to each student.,,2,,,,
+last_name,Student,Surname,The student's last name.,,Last2,,,,
+first_name,Student,FirstName,The student's first name.,,First2,,,,
+home_campus,"Education, school","school_id, school_name,category",The identifier for the student's home campus (school) where they are primarily enrolled.,,THOMAS C MARSH MIDDLE,,,,
+choice_campus,"Education, school","school_id, school_name,category","The identifier for the campus (school) the student has chosen, if applicable (e.g., for magnet programs or transfers).",,THOMAS C MARSH MIDDLE,,,,
+grade_level,StudentSchoolAssociation,EntryGradeLevelDescriptor,"The academic grade level the student is currently in (e.g., 9th grade, 10th grade).",,7,,,,
+cte_sis,CTEProgramService,CIPCode,A unique identifier for the student's enrollment in Career and Technical Education (CTE) within the Student Information System (SIS).,,0,,,,
+cte_actual,CTEProgramService,CTEProgramService,Indicates the actual CTE program the student is enrolled in.,,5,,,,
+cte_actual_reason,NA,NA,The reason or justification for the student's enrollment in the CTE program.,,-,,,,
+cte_intent,CTEProgramService,CTEProgramService,The intended CTE program the student is planning to enroll in.,,5,,,,
+cte_intent_reason,NA,na,The reason or justification for the student's intention to enroll in a specific CTE program.,,-,,,,
+program_of_study,Program,ProgramName,"The academic or vocational program the student is following (e.g., engineering, business).",,"Business mgmt, pos",,,,
+academic_plan,StudentSchoolAssociation,EducationPlan,"The student’s planned academic trajectory or course of study, including subjects and credits.",,,,,,
+special_ed,SpecialEducationProgramService,NA,Indicates whether the student is enrolled in special education programs.,,FALSE,,,,
+esl,NA,NA,Indicates whether the student is enrolled in English as a Second Language (ESL) programs.,,FALSE,,,,
+lep,StudentEducationOrganizationAssociation,LimitedEnglishProficiency,"Indicates whether the student is a Limited English Proficient (LEP) student, typically referring to their proficiency in English.",,FALSE,,,,
+at_risk,StudentIndicator,Indicator,"Indicates whether the student is considered ""at risk"" based on academic or socio-economic factors.",,FALSE,,,,
+gt,StudentIndicator,NA,Indicates whether the student is identified as Gifted and Talented (GT).,,FALSE,,,,
+economic_status,NA,NA,"Indicates the student's economic status (e.g., low-income, free/reduced lunch).",,0,,,,
+special_ed_setting,"StudentSpecialEducationProgramAssociation
+",SpecialEducationSetting,Describes the specific setting or accommodations the student requires within the special education program.,,0,,,,
+leaver_code,StudentSchoolAssociation,ExitWithdrawType,"A code used to classify students who have left the district or school system (e.g., transferred, graduated, dropped out).",,-,,,,
+title_one,StudentTitleIPartAProgramAssociation,NA,Indicates whether the student qualifies for Title I services under federal guidelines for disadvantaged students.,,FALSE,,,,
+enrollment_status,StudentSchoolAssociation,NA,"The current enrollment status of the student (e.g., active, withdrawn, graduated).",,A,,,,
+ethnicity,StudentEducationOrganizationAssociation,NA,"The student's ethnicity or race classification (e.g., Hispanic, Black, White).",,Asian,,,,
+migrant,MigrantEducationProgramService,PrimaryIndicator,Indicates whether the student is part of a migrant education program or comes from a migrant background.,,-,,,,
+bilingual,NA,NA,Indicates whether the student is enrolled in a bilingual education program.,,-,,,,
+full_pgp,GraduationPlan,NA,Indicates whether the student has a full Personalized Graduation Plan (PGP) in place.,,0,,,,
+home_campus_number,School,SchoolId,The unique identifier for the student's home campus (school) within the district.,,1,,,,
+first_name,Student,FirstName,The student's first name.,,First1,,,,
+last_name,Student,Surname,The student's last name.,,Last1,,,,
+student_id,Student,StudentUniqueId,The unique identifier assigned to the student within the district's system.,,1,,,,
+student_current_grade_level,StudentSchoolAssociation,GradeLevel,"The current grade level of the student (e.g., 9th, 10th, 11th, etc.).",,12,,,,
+courses_in_this_pos,Course,NA,The list of courses the student has completed in for their program of study (POS).,,"Engineering & Architec Pltw1
+ Intro To Engineering Design Pltw2
+ Engineering Science Pltw2
+ Engineering Design & Dev Pltw1",,,,"We can map it to CourseTitle, but it contains list og all course and not only the completed one"
+service_ids_in_this_pos,StudentCTEProgramAssociation,CTEProgramService,The unique identifiers for the services associated with the student's program of study.,,"N1303747
+ N1303742
+ 13037500
+ N1303749",,,,
+courses_taken_in_school_year,NA,NA,The courses the student has taken during the academic school year.,,"2023-2024
+ 2021-2022
+ 2022-2023
+ 2024-2025",,,,
+credit_already_earned,Credits,NA,The total number of credits the student has already earned in relation to their program of study.,,3.5,,,,
+teacher_name,Staff,FirstName,The name of the teacher responsible for instructing the student in their courses.,,"Last, First",,,,
+pos_code,Program,ProgramId,The code associated with the student's program of study (POS).,,22,,,,
+pos_name,Program,ProgramName,The name of the student's program of study (POS).,,Engineering Foundations,,,,
+num_courses_in_this_pos,StudentCTEProgramAssociation,NA,The total number of courses included in the student's program of study.,,3,,,,
+num_credits_in_this_pos,NA,NA,The total number of credits the student has earned within their program of study.,,3,,,,
+num_level_3_or_4_courses_in_this_pos,NA,NA,The number of level 3 or 4 courses the student has completed within their program of study.,,2,,,,
+cert_code,Credential,CredentialIdentifier,The unique identifier code for the certification associated with the student's program.,,942,,,,
+certification_name,Credential,CredentialField,The name of the certification the student is pursuing or has earned.,,Autodesk Associate (Certified User) Revit Architecture,,,,
+taken,NA,NA,Indicates whether the student has taken the exam associated with the certification.,,1,,,,
+passed,NA,NA,Indicates whether the student has passed the exam associated with the certification.,,1,,,,
+earned,NA,NA,Indicates whether the student has earned the certification or credit related to the program of study.,,1,,,,
+most_recent_test_date,NA,NA,The date when the student most recently took the certification exam or test.,,12/19/2024,,,,
+DCIC,EducationOrganization,EducationOrganizationIdentificationCode.IdentificationCode,District Campus Identification Code—unique identifier for the campus within the district.,,0,,,EducationOrganizationIdentificationCode.EducationOrganizationIdentificationSystem='District',
+Student_Number,Student,StudentUniqueId,Local student identifier assigned by the district or campus.,,1,,,,
+first_name,Student,Name.FirstName,Student’s first name.,,First,,,,
+last_name,Student,Name.MiddleName,Student’s last name.,,Last,,,,
+grade_level,,N/A,"Student’s current grade level (e.g., 9, 10, 11, 12).",,12,,,,
+SchoolID,School,SchoolId,Unique identifier for the student’s school or campus.,,380,,,,
+S_TX_STU_PERF_ACKN_C_STATUS_DATE,StudentAcademicRecord,Recognition.RecognitionAwardDate,"Date the College, Career, and Military Readiness (CCMR) performance acknowledgment status was recorded.",The date the recognition was awarded or earned.,8/31/2021,,,,
+S_TX_STU_PERF_ACKN_C_PERFORMANCE_INDICATOR,StudentAcademicRecord,Recognition.RecognitionDescription,Description or label of the CCMR performance indicator the student is being evaluated for.,A description of the type of recognition earned by or awarded to the individual.,CL,,,,
+S_TX_STU_PERF_ACKN_C_INDICATOR_CODE,,N/A,"Code representing a specific CCMR performance indicator (e.g., IBC, dual credit, military enlistment).","The nature of recognition given to the individual for accomplishments in a co-curricular, or extra-curricular activity.",538,,,,
+S_TX_STU_PERF_ACKN_C_E1655_IBC_VENDOR_CODE,,N/A,Code identifying the Industry-Based Certification (IBC) vendor.,,860,,,,
+S_TX_STU_PERF_ACKN_C_E1654_IBC_EXAM_FEE_AMT,,N/A,"Amount paid for the IBC exam fee, if applicable.",,,,,,
+S_TX_STU_PERF_ACKN_C_INDICATOR_VALUE,,N/A,"Binary or categorical value indicating whether the performance indicator was met (e.g., Y/N).",,Google Analytics Individual Qualification,,,,
+S_TX_STU_PERF_ACKN_C_COMMENTS,,N/A,Additional notes or comments related to the performance acknowledgment.,,,,,,
+S_TX_STU_PERF_ACKN_C_E1733_IBC_CERT_RESULT,,N/A,"Result or status of the student's IBC certification (e.g., Passed, Failed, Pending).",,2,,,,Need confirmation on the description since the sample data is conflicting the description
+updated_at,,N/A,Timestamp indicating the last update to the record.,,2022-05-12 17:22:14 UTC,,,,Append the same records?
+documentation_uploaded,,N/A,Flag indicating whether supporting documentation has been uploaded for the student’s CCMR indicator.,,No,,,,
+campus_num,school,school_id,Unique identifier for the student’s campus.,"The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",1,,,,
+grade_level,StudentSchoolAssociation,EntryGradeLevelDescriptor,The student’s current grade level.,The grade level or primary instructional level at which a student enters and receives services in a school or an educational institution during a given academic session.,9,,,,
+student_id,student,studentUniqueId,Unique identifier assigned to the student.,A unique alphanumeric code assigned to a student,1,,,,
+last_name,student,lastsurname,Student’s last name.,legal name of the person.,Last1,,,,
+first_name,student,firstName,Student’s first name.,legal name of the person.,First1,,,,
+cert_code,Credential,CredentialIdentifier,Certification code aligned to the student's program of study.,Identifier or serial number assigned to the credential.,630,,,,
+cert_name,Credential,CredentialField,Name or title of the certification.,"The field of certification for the certificate (e.g., Mathematics, Music).",NCCER Core,,,"{
+  ""credentialIdentifier"": ""630"",
+  ""credentialFieldDescriptor"": ""uri://ed-fi.org/CredentialFieldDescriptor#Mathematics"",
+  ""issuanceDate"": ""2024-06-15"",
+  ""credentialTypeDescriptor"": ""uri://ed-fi.org/CredentialTypeDescriptor#Certification"",",
+A-F?,n/a,,Indicates if the certification is graded A–F.,,1,,,,
+test_date,StudentAssessment,AdministrationDate,Date the certification exam or assessment was taken.,The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones.,1/28/2025,,,,
+aligned_pos_code,Program,ProgramId,Code for the aligned Program of Study (POS).,"A unique number or alphanumeric code assigned to a program by a school, school system, a state, or other agency or entity.",54,,,,
+aligned_pos,Program,programaName,Name of the aligned Program of Study.,"The formal name of the program of instruction, training, services, or benefits available through federal, state, or local agencies.",Construction Management and Inspection,,,,
+num_courses,n/a,,Total number of CTE courses the student is taking this year.,,1,,,,
+num_credits,CourseTranscript,EarnedAdditionalCredits,Total number of CTE credits the student is earning this year.,The number of additional credits a student attempted and could earn for successfully completing a given course.,1,,,"{
+  ""CourseTranscript"": {
+    ""AdditionalEarnedCredits"": 1,
+    ""AdditionalEarnedCreditType"": ""CTE"",
+    ""CreditType"": ""CTE""
+  }
+}",
+num_courses_before_this_year,n/a,,Number of CTE courses taken before the current school year.,,0,,,,Can be figured out by logics
+num_credits_before_this_year,n/a,,Number of CTE credits earned before the current school year.,,0,,,,
+num_level_2_and_above_credits_available_this_year,n/a,,Number of Level 2 or higher credits the student can earn this year.,,0,,,,
+num_level_2_and_above_credits_earned_before_this_year,n/a,,Number of Level 2 or higher credits earned before this year.,,0,,,,
+num_level_3_or_4_credits_available_this_year,n/a,,Number of Level 3 or 4 credits the student can earn this year.,,0,,,,
+num_level_3_or_4_credits_earned_before_this_year,n/a,,Number of Level 3 or 4 credits earned before this year.,,0,,,,
+cte_actual,n/a,n/a,Indicates the actual CTE status or outcome for the student.,,,,,,
+student_courses_in_pos,remark added,,List of CTE courses the student has taken within their POS.,,Principles Of Construction,,,"{
+  ""StudentSectionAssociations"": [
+    {
+      ""SectionReference"": {
+        ""SectionIdentifier"": ""CON101"",
+        ""SessionReference"": {
+          ""SchoolYear"": 2025
+        }
+      },
+      ""CourseReference"": {
+        ""CourseCode"": ""CON101"",
+        ""CourseTitle"": ""Principles of Construction""
+      },
+      ""BeginDate"": ""2025-08-15"",
+      ""EndDate"": ""2026-05-20"",
+      ""PrimaryIndicator"": true,
+      ""ProgramReference"": {
+        ""ProgramCode"": ""54"",
+        ""ProgramName"": ""Construction Management and Inspection""
+      }
+    }
+  ]
+",
+campus_number,EducationOrganization,EducationOrganizationId,The unique identifier assigned to the campus or school where the student is enrolled.,,1,,,,
+campus_name,educationorganization,nameofinstitution,The name of the campus or school the student is attending.,,BRYAN ADAMS H S,,,,
+grade_level,StudentSchoolAssociation,EntryGradeLevelDescriptor,"The academic grade level the student is currently in (e.g., 9th grade, 10th grade).",,9,,,,
+student_id,StudentEducationOrganizationAssociation,StudentIdentificationCode.IdentificationCode,A unique identifier assigned to the student within the school district or institution.,,2,,,,
+last_name,Student,FirstName,The student's last name.,,Last2,,,,
+first_name,Student,Surname,The student's first name.,,First2,,,,
+cte_actual,CTEProgramService,CTEProgramService,Indicates the actual Career and Technical Education (CTE) program the student is enrolled in.,,6,,,,
+pos_code,Program,ProgramId,The code representing the student’s program of study (POS).,,46,,,,
+program_of_study,Program,ProgramName,"The academic or vocational program the student is following (e.g., engineering, business).",,Plumbing and Pipefitting,,,,
+StudentId,student,studentlocalid,A unique identifier assigned to the student,,2,,,,
+StudentFirstName,student,firstname,The student's first name.,,First2,,,,
+StudentLastName,student,lastsurname,The student's last name.,,Last2,,,,
+StudentMiddleName,student,middlename,The student's middle name (if applicable).,,Middle2,,,,
+StudentCampus,educationorganization,nameofinstitution,The campus or school where the student is enrolled.,,Seagoville High School,,,,
+College,rdh_tsia_registrants,registered_test_center,The college or university the student is registering for the TSIA test.,,,,,,
+Accepted,rdh_tsia_registrants,accepted,Indicates whether the student has been accepted to take the TSIA test.,,N,,,,
+PreassessmentComplete,rdh_tsia_registrants,PreassessmentComplete,Indicates whether the student has completed the pre-assessment required for the TSIA test.,,Y,,,,
+StudentEmail,student,studentemail,The student's email address.,,4075192@dallasisd.org,,,,
+StudentDOB,student,birthdate,The student's date of birth.,,2/9/2006 0:00,,,,
+STUDENT_NUMBER,Student,StudentUniqueId,A unique identifier assigned to the student,A unique alphanumeric code assigned to a student.,1,,,,
+STUDENT_FIRST_NAME,Student,FirstName,The student's first name.,"A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change.",First1,,,,
+STUDENT_MIDDLE_NAME,Student,MiddleName,The student's middle name (if applicable).,"A secondary name given to an individual at birth, baptism, or during another naming ceremony.",Middle1,,,,
+STUDENT_LAST_NAME,Student,Surname,The student's last name.,The name borne in common by members of a family.,Last1,,,,
+STUDENT_CAMPUS,rdh_disd_financialaid,NameOfInstitution,The campus or school where the student is enrolled.,,Skyline High School,,,,
+OPTED_IN,rdh_disd_financialaid,Opted_In,Indicates whether the student has opted in to receive financial aid or participate in financial aid programs.,,N,,,,
+OPT_IN_FORM,rdh_disd_financialaid,Opt_In_Form,The form or document that the student submitted to opt in to the financial aid program.,,,,,,What are the type of file that we will receive in this feild?
+OPTED_OUT,rdh_disd_financialaid,Opted_Out,Indicates whether the student has opted out of receiving financial aid or participating in financial aid programs.,,N,,,,
+STATUS_DATE,rdh_disd_financialaid,Status_Date,The date when the student’s financial aid status was last updated or changed.,,,,,,What are the changes that triggers this date?
+SID\r24-25,,,Unique identifier assigned to the student.,,XXXXXXXXX,,,,No use as student id notes from Mark F.This comes across as all X charachters.  I would rely on the Local ID and the TX Unique Student ID
+Local ID\r24-25,StudentIdentificationCode,identificationCodes,District-assigned identifier used locally for student tracking.,"A coding scheme that is used for identification and record-keeping purposes by schools, social services or other agencies to refer to a student.
+",1,9999999,,"identificationCodes:[
+      {
+        ""studentIdentificationSystemDescriptor"": ""Local"",
+        ""identificationCode"": ""1234567""
+      }
+    ]",Secondary Identification for student 
+TX Unique Student ID\r24-25,StudentIdentificationCode,studentUniqueId,State-issued Texas Unique Student Identifier (TSDS UID).,"A coding scheme that is used for identification and record-keeping purposes by schools, social services or other agencies to refer to a student.
+",99999998,,,,
+First Name\r24-25,student,firstName,Student’s first name.,legal name of the person.,First1,,,,
+Last Name\r24-25,student,lastName,Student’s last name.,legal name of the person.,Last1,,,,
+Campus\r24-25,"Education, school","school_id, school_name,category",Campus the student is enrolled in.,"The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",(057905007) - THOMAS JEFFERSON H S,,,"EducationOrganization
+ID        Name        Category        Parent ID
+57905        Dallas ISD        LocalEducationAgency        NULL
+57905007        THOMAS JEFFERSON H S        School        57905
+
+School
+school_id        campus_code        lea_id
+57905007        007        57905",Notes for DISD team: The digits inside the parenthesis are the combination of the state education agency ID for Dallas ISD (057905) and then a 3 digit school number (in this case 007)
+Grade\r24-25,StudentSchoolAssociation,EntryGradeLevelDescriptor,Student’s current grade level.,The grade level or primary instructional level at which a student enters and receives services in a school or an educational institution during a given academic session.,12,,,"{
+  ""studentSchoolAssociation"": {
+    ""studentReference"": {
+      ""studentUniqueId"": ""99999998""
+    },
+    ""schoolReference"": {
+      ""schoolId"": 57905007
+    },
+    ""entryDate"": ""2024-08-14"",
+    ""gradeLevelDescriptor"": ""Twelfth grade""
+  }
+}",
+Date of Birth\r24-25,	Student,birthDate,Student’s date of birth.,"The set of elements that capture relevant data regarding a person's birth, including birth date and place of birth.",1/28/2004,,,,
+Race/Ethnicity\r24-25,student,HispanicLatinoEthnicity(boolean),Student’s reported race and/or ethnicity.,"An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino.""",H,,,"{
+  ""student"": {
+    ""studentUniqueId"": ""99999998"",
+    ""firstName"": ""Maria"",
+    ""lastSurname"": ""Lopez"",
+    ""birthDate"": ""2004-01-28"",
+    ""hispanicLatinoEthnicity"": true,
+    ""races"": [
+      {
+        ""raceDescriptor"": ""White""
+      }
+    ]
+  }
+}",
+Gender\r24-25,Student,SexDescriptor,Student’s gender.,A person's birth sex.,M,,,,
+ODS CTE Code,,,,,,,,,
+Economically Disadvantaged\r24-25,StudentEducationOrganizationAssociation,economicDisadvantaged,Indicates if the student is economically disadvantaged.,"An indication of inadequate financial condition of an individual's family, as determined by family income, number of family members/dependents, participation in public assistance programs, and/or other characteristics considered relevant by federal, state, and local policy.",Y,Y/N,,,
+EL (Current & Monitored)+\r24-25,StudentEducationOrganizationAssociation,EnglishLearnerParticipation,Identifies students currently or formerly monitored as English Learners (EL).,An indication that an English learner student is served by an English language instruction educational program supported with Title III of ESEA funds.,1,1 or 0,,"""{
+  """"studentEducationOrganizationAssociation"""": {
+    """"studentReference"""": {
+      """"studentUniqueId"""": """"99999998""""
+    },
+    """"educationOrganizationReference"""": {
+      """"educationOrganizationId"""": 57905007
+    },
+    """"englishLearner"""": true}""",
+Special Ed (Current)\r24-25,n/a,,Indicates if the student is currently in Special Education services.,,Y,Y or blank,,,
+Special Ed (Former)\r24-25,n/a,,Indicates if the student previously received Special Education services.,,,Y or blank,,,
+Continuously Enrolled\r24-25,n/a,,Indicates continuous enrollment status.,,N,Y/N,,,
+Non Continuously Enrolled\r24-25,n/a,,Indicates if the student has had interrupted or non-continuous enrollment.,,Y,Y/N,,,
+High Focus\r24-25,StudentIndicator,indicator,Identifies students flagged as high focus for academic monitoring.,"An indicator or metric computed for the student (e.g., at risk).",Y,Y/N,,"{
+  ""studentIndicator"": {
+    ""studentReference"": {
+      ""studentUniqueId"": ""123456""
+    },
+    ""indicatorName"": ""High Focus"",
+    ""indicator"": true,
+    
+  }
+}",
+Highly Mobile\r24-25,StudentIndicator,indicator,Indicates if the student is considered highly mobile.,"An indicator or metric computed for the student (e.g., at risk).",N,Y/N,,,
+Foster Care\r24-25,StudentEducationOrganizationAssociation,StudentCharacteristic        ,Indicates if the student is in foster care.,"Reflects important characteristics of a student. If a student has a characteristic present, that characteristic is considered true or active for that student. If a characteristic is not present, no assumption is made as to the applicability of the characteristic, but local policy may dictate otherwise",,1 or blank,,,
+Homeless\r24-25,StudentEducationOrganizationAssociation,StudentCharacteristic        ,Indicates if the student is homeless.,"Reflects important characteristics of a student. If a student has a characteristic present, that characteristic is considered true or active for that student. If a characteristic is not present, no assumption is made as to the applicability of the characteristic, but local policy may dictate otherwise",,Digit or Blank,,"{
+  ""studentEducationOrganizationAssociation"": {
+    ""studentReference"": {
+      ""studentUniqueId"": ""99999998""
+    },
+    ""educationOrganizationReference"": {
+      ""educationOrganizationId"": 12345
+    },
+    ""studentCharacteristics"": [
+      {
+        ""studentCharacteristicDescriptor"": ""uri://ed-fi.org/StudentCharacteristicDescriptor#Homeless"",
+      
+      }
+    ]
+  }
+}",Unsure about the program only status is true or false so characteristics is used. If its true will be populated as homeless
+Migratory\r24-25,StudentEducationOrganizationAssociation,StudentCharacteristic        ,Indicates if the student is migratory.,"Reflects important characteristics of a student. If a student has a characteristic present, that characteristic is considered true or active for that student. If a characteristic is not present, no assumption is made as to the applicability of the characteristic, but local policy may dictate otherwise",0,1 or 0,,,This descriptor captures important characteristics of the student's environment or situation. Generally used for non-program-based student characteristics.
+Prelim Cohort Year\r24-25,GraduationPlan,graduationSchoolYearTypeReference.schoolYear        ,Student’s preliminary cohort graduation year.,The school year the student is expected to graduate.,,Blank or Year,,,
+Graduation Status\r24-25,student,,Graduation status of the student.,,0,1 or 0,,,
+CCMR MET\r24-25,StudentIndicator,indicator,"Indicates if the student met College, Career, or Military Readiness (CCMR) standards.","An indicator or metric computed for the student (e.g., at risk).",N,Y/N,,"indicatorName: A descriptive name for the indicator, e.g., ""CCMR Met"".
+indicator: A boolean value representing the presence (true) or absence (false) of the indicator.",
+ELA TSIA\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates if the student took the ELA TSIA exam.,A unique number or alphanumeric code assigned to an assessment administered to a student.,-,Y or -,,"assessmentIdentifier: A unique identifier for the assessment (e.g., ""ELA TSIA"").",
+ELA TSIA SCORE\r24-25,StudentAssessment,ScoreResult,Score the student earned on the ELA TSIA exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",.,Score or .,,,
+ELA TSIA ESSAY SCORE\r24-25,StudentAssessment,ScoreResult,Essay score earned on the ELA TSIA.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+ELA TSIA2 SCORE\r24-25,StudentAssessment,ScoreResult,Score on the ELA TSIA 2.0 exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",.,Score or .,,,
+ELA TSIA2 ESSAY SCORE\r24-25,StudentAssessment,ScoreResult,Essay score on the ELA TSIA 2.0 exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+ELA TSIA2 DIAG SCORE\r24-25,StudentAssessment,ScoreResult,Diagnostic score on the ELA TSIA 2.0 exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+ELA ACT\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates if the student took the ACT exam for ELA.,A unique number or alphanumeric code assigned to an assessment administered to a student.,,Y/N/Blank,,,
+ELA ACT Test Date\r24-25,StudentAssessment,AdministrationDate,Date the ELA ACT exam was taken.,The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones.,,Date,,,
+ELA ACT SCORE\r24-25,StudentAssessment,ScoreResult,Score earned on the ELA ACT exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+ELA SAT\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates if the student took the SAT exam for ELA.,A unique number or alphanumeric code assigned to an assessment administered to a student.,,Y/N/Blank,,,
+ELA SAT Test Date\r24-25,StudentAssessment,AdministrationDate,Date the ELA SAT exam was taken.,The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones.,,Date,,,
+ELA SAT SCORE\r24-25,StudentAssessment,ScoreResult,Score earned on the ELA SAT exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+ELA College Prep PEIMS\r24-25,n/a,,Indicates enrollment in ELA college prep course per PEIMS.,,-,Y/N/-,,,
+ELA Met Excl CP\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates ELA criteria met excluding college prep.,A unique number or alphanumeric code assigned to an assessment administered to a student.,,Y/N,,,
+Met Any ELA TSI Criteria\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates if any ELA TSI criteria were met.,A unique number or alphanumeric code assigned to an assessment administered to a student.,N,Y/N,,,The mapping is conflicting
+MATH TSIA\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates if the student took the MATH TSIA exam.,A unique number or alphanumeric code assigned to an assessment administered to a student.,-,Y/-,,,
+MATH TSIA SCORE\r24-25,StudentAssessment,ScoreResult,Score the student earned on the MATH TSIA exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",.,Score or .,,,
+MATH TSIA2 SCORE\r24-25,StudentAssessment,ScoreResult,Score on the MATH TSIA 2.0 exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",.,Score or .,,,
+MATH TSIA2 DIAG SCORE\r24-25,StudentAssessment,ScoreResult,Diagnostic score on the MATH TSIA 2.0 exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+MATH ACT\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates if the student took the ACT exam for math.,A unique number or alphanumeric code assigned to an assessment administered to a student.,,Y/N/Blank,,,
+MATH ACT Test Date\r24-25,StudentAssessment,AdministrationDate,Date the MATH ACT exam was taken.,The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones.,,Date,,,
+MATH ACT SCORE\r24-25,StudentAssessment,ScoreResult,Score earned on the MATH ACT exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+MATH SAT\r24-25,StudentAssessment,ScoreResult,Indicates if the student took the SAT exam for math.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Y/N/Blank,,,
+MATH SAT Test Date\r24-25,StudentAssessment,AdministrationDate,Date the MATH SAT exam was taken.,The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones.,,Date,,,
+MATH SAT SCORE\r24-25,StudentAssessment,ScoreResult,Score earned on the MATH SAT exam.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+MATH College Prep PEIMS\r24-25,n/a,,Indicates enrollment in MATH college prep course per PEIMS.,,-,Y/N/-,,,
+MATH Met Excl CP\r24-25,n/a,,Indicates MATH criteria met excluding college prep.,,N,Y/N,,,
+Met Any MATH TSI Criteria\r24-25,StudentAssessment,Assessment.AssessmentIdentifier,Indicates if any MATH TSI criteria were met.,A unique number or alphanumeric code assigned to an assessment administered to a student.,,Y/N,,"assessmentIdentifier: ""MATH_TSI_Criteria""",The mapping is conflicting
+Met ELA and MATH Excl CP\r24-25,,,"Indicates if both ELA and MATH criteria were met, excluding college prep.",,N,Y/N,,"ELA Assessment:
+
+assessmentIdentifier: ""ELA_TSI_Criteria""
+
+namespace: ""http://www.tea.state.tx.us""
+
+assessmentTitle: ""ELA TSI Criteria""
+
+assessmentCategoryDescriptor: ""State""
+
+academicSubjectDescriptor: ""English Language Arts""
+
+gradeLevels: [""Grade 11"", ""Grade 12""]
+
+assessmentReportingMethodType: ""Pass/Fail""
+
+resultDatatypeType: ""Boolean""
+
+Mathematics Assessment:
+
+assessmentIdentifier: ""MATH_TSI_Criteria""
+
+namespace: ""http://www.tea.state.tx.us""
+
+assessmentTitle: ""Mathematics TSI Criteria""
+
+assessmentCategoryDescriptor: ""State""
+
+academicSubjectDescriptor: ""Mathematics""
+
+gradeLevels: [""Grade 11"", ""Grade 12""]
+
+assessmentReportingMethodType: ""Pass/Fail""
+
+resultDatatypeType: ""Boolean""
+
+2. StudentAssessment Entities
+Record the student's results for each assessment.
+
+ELA StudentAssessment:
+
+studentUniqueId: ""123456789""
+
+assessmentReference:
+
+assessmentIdentifier: ""ELA_TSI_Criteria""
+
+namespace: ""http://www.tea.state.tx.us""
+
+administrationDate: ""2025-04-15""
+
+scoreResults:
+
+assessmentReportingMethodType: ""Pass/Fail""
+
+result: ""true""
+
+resultDatatypeType: ""Boolean""",
+TSI Met ELA and MATH\r24-25,,,Indicates if both ELA and MATH TSI criteria were fully met.,,N,Y/N,,,
+ACT Composite Score\r24-25,StudentAssessment,ScoreResult,Composite score earned on the ACT.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,Score or blank,,,
+AP IB MET\r24-25,n/a,,Indicates if AP or IB standards were met.,,-,Y/-,,,
+Dual Credit PEIMS\r24-25,n/a,,Dual credit enrollment status reported to PEIMS.,,N,Y/N,,,
+IBC PEIMS 2025\r24-25,postSecondaryEvents,postSecondaryEvents.PostSecondaryEventCategory,Industry-Based Certification (IBC) earned for 2025 per PEIMS.,The post secondary event that is logged.,N,Y/N,,"studentUniqueId: ""123456789""
+
+educationOrganizationId: ""123456""
+
+schoolYear: 2026
+
+termDescriptor: ""2025-2026 School Year""
+
+postSecondaryEvents:
+
+postSecondaryEventCategoryDescriptor: ""Industry-Based Certification Earned""
+
+eventDate: ""2026-05-15""
+
+postSecondaryInstitutionName: ""Certification Authority Name""",need to split the school year like in example
+IBC PEIMS 2026\r24-25,postSecondaryEvents,postSecondaryEvents.PostSecondaryEventCategory,Industry-Based Certification (IBC) earned for 2026 per PEIMS.,The post secondary event that is logged.,N,Y/N,,,
+Flagged IBC Only\r24-25,StudentProgramAssociation,program.programName,Indicates student flagged for IBC only.,"The formal name of the program of instruction, training, services, or benefits available through federal, state, or local agencies.",N,Y/N,,,
+Level 1 or 2 Cert\r24-25,diploma,DiplomaType,Indicates if the student earned a Level 1 or 2 Certificate.,The type of diploma/credential that is awarded to a student in recognition of his/her completion of the curricular requirements.,-,Y/-,,,
+Assoc Deg PEIMS\r24-25,diploma,DiplomaType,Indicates if the student earned an Associate Degree per PEIMS.,The type of diploma/credential that is awarded to a student in recognition of his/her completion of the curricular requirements.,-,Y/-,,,
+OnRamps\r24-25,n/a,,Participation in OnRamps dual enrollment courses.,,0,Y/-,,,
+IEP PEIMS\r24-25,n/a,,Indicates if the student has an Individualized Education Program (IEP) per PEIMS.,,-,Y/-,,"{
+  ""studentSpecialEducationProgramAssociation"": {
+    ""studentReference"": {
+      ""studentUniqueId"": ""123456""
+    },
+    ""programReference"": {
+      ""programTypeDescriptor"": ""SpecialEducation""
+    },
+    ""iepIndicator"": true
+  }
+}","Relevant Fields:
+
+studentReference: Links to the student's unique identifier.
+
+programReference: References the special education program.
+
+programTypeDescriptor: Should be set to a descriptor indicating ""Special Education"" (e.g., ""uri://ed-fi.org/ProgramTypeDescriptor#SpecialEducation"").
+
+beginDate: The date when the student began receiving special education services.
+esc16.net
+
+endDate: The date when the student stopped receiving services (if applicable).
+
+iepIndicator: A boolean value indicating the presence (true) or absence (false) of an IEP."
+SPED Adv Grad Plan\r24-25,GraduationPlan,GraduationPlanTypeDescriptor,Indicates student is on a Special Education advanced graduation plan.,The type of academic plan the student is following for graduation.,-,Y/-,,"Implementation Details:
+
+When a student is on a Special Education Advanced Graduation Plan (SPED Adv Grad Plan = Y), set the graduationPlanTypeDescriptor to a value that reflects this status, such as ""SpecialEducationAdvanced"".
+
+Ensure that this descriptor value is defined within your Ed-Fi implementation to accurately represent the plan type.",
+Military\r24-25,StudentIndicator,indicator,Indicates if the student has military enlistment or plans.,"An indicator or metric computed for the student (e.g., at risk).",-,Y/-,,"{
+  ""studentIndicator"": {
+    ""studentReference"": {
+      ""studentUniqueId"": ""123456""
+    },
+    ""indicatorName"": ""Military Enlistment"",
+    ""indicator"": true,
+    ""beginDate"": ""2025-05-16"",
+    ""designatedBy"": ""Guidance Counselor"",
+    ""indicatorGroup"": ""Postsecondary Plans""
+  }
+}",
+Student ID,Student,StudentUniqueId,Unique identifier assigned to each student.,Unique identifier assigned to the student.,View Profile,,,,"Q. Can we consider Student_number / student_id as a unique identifier.
+Q. Is there any relation between student_number/student_id and TX Unique Student ID"
+Local ID,StudentIdentificationCode,identificationCodes,District-assigned identifier for internal tracking of the student.,"A coding scheme that is used for identification and record-keeping purposes by schools, social services or other agencies to refer to a student.
+",1,9999999,,,
+TX Unique Student ID,StudentIdentificationCode,identificationCodes,State-issued Texas Unique Student Identifier (TSDS UID).,"A coding scheme that is used for identification and record-keeping purposes by schools, social services or other agencies to refer to a student.
+",999999998,,,,
+First Name,student,firstName,Student’s first name.,legal name of the person.,First1,,,,
+Last Name,student,lastName,Student’s last name.,legal name of the person.,Last1,,,,
+Campus,"Education, school","school_id, school_name,category",Name or code of the campus the student is enrolled in.,"The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",(057905001) - BRYAN ADAMS H S LEADERSHIP ACADEMY,,,,
+Grade,StudentSchoolAssociation,EntryGradeLevelDescriptor,"Current grade level of the student (e.g., 11, 12).",The grade level or primary instructional level at which a student enters and receives services in a school or an educational institution during a given academic session.,11,,,,
+Race/Ethnicity,studenteducationorganizationassociation,Race,Student’s reported race and/or ethnicity.,"An indication that the individual traces his or her origin or descent to Mexico, Puerto Rico, Cuba, Central, and South America, and other Spanish cultures, regardless of race. The term, ""Spanish origin,"" can be used in addition to ""Hispanic or Latino.""",W,,,,Conflict in the feild and the mapped attribute
+Gender,Student,SexDescriptor,Student’s gender.,A person's birth sex.,F,,,,
+Graduation Status,n/a,,Status indicating if the student has graduated or is on track for graduation.,,0,1 or 0,,,
+CCMR Met,StudentIndicator,indicator,"Indicates if the student met College, Career, or Military Readiness (CCMR) criteria.",The value of the indicator or metric.,N,Y/N,,,"Indicator would be in Boolean, how would we identify the "
+Dual Credit PEIMS,dualcredit,dualcredit.dualCreditIndicator,PEIMS indicator showing if the student is enrolled in dual credit courses.,Indicates whether the student assigned to the section is to receive dual credit upon successful completion.,N,Y/N,,,"dualCreditIndicator (boolean): Indicates if the course section is a dual credit course.
+
+dualCreditTypeDescriptor (string): Specifies the type of dual credit, such as ""High School and College Credit.""
+Ritter
+
+dualCreditInstitutionDescriptor (string): Identifies the institution offering the dual credit."
+Dual Credit Reading\rMet,dualcredit,dualcredit.dualCreditIndicator,Indicates whether dual credit reading requirements were met.,Indicates whether the student assigned to the section is to receive dual credit upon successful completion.,N,Y/N,,,
+Dual Credit Reading\rHours,courseTranscript,CourseTranscript.EarnedCredits,Total dual credit hours completed in reading.,Credits or units of value awarded for the completion of a course.,0,,,,"creditsEarned: Indicates the number of credits the student earned for the course.
+
+creditTypeDescriptor: Specifies the type of credit awarded, such as ""Dual Credit.""
+
+academicSubjectDescriptor: Denotes the subject area of the course, which should be set to ""Reading"" for relevant courses."
+Dual Credit Reading\rHours Needed,logical compute might required as per metadata,,Remaining dual credit hours needed in reading.,,3,,,,"Field Name        Ed-Fi v5.2.0 Element        Example Value        Description
+Dual Credit Reading Hours Completed                        
+Course Code        CourseTranscript.CourseReference.CourseCode        ""ENGL101DC""        Unique code for the dual credit reading course. 
+Earned Credits        CourseTranscript.EarnedCredits        3.0        Number of credits earned for the dual credit reading course. 
+Credit Category Descriptor        CourseTranscript.CreditCategoryDescriptor        ""DualCreditReading""        Indicates the type of credit earned. This value should be defined within your Ed-Fi implementation's namespace. 
+Dual High School Credit Indicator        CourseTranscript.DualHighSchoolCreditIndicator        true        Indicates that the course also counts towards high school graduation requirements. 
+Dual Credit Reading Hours Needed                        
+Graduation Plan Type        GraduationPlan.GraduationPlanTypeDescriptor        ""Recommended""        Type of graduation plan the student is following. 
+Required Reading Credits        GraduationPlan.CreditsBySubjects.Credits (where AcademicSubjectDescriptor is ""Reading"")        4.0        Total number of reading credits required for the graduation plan.  Note: This represents the overall reading requirement.
+Remaining Dual Credit Reading Hours Needed        (Conceptual - Calculation based on EarnedCredits and requirements)        3.0"
+Dual Credit Mathematics\rMet,dualcredit,dualcredit.dualCreditIndicator,Indicates whether dual credit math requirements were met.,Indicates whether the student assigned to the section is to receive dual credit upon successful completion.,N,Y/N,,,
+Dual Credit Mathematics\rHours,courseTranscript,CourseTranscript.EarnedCredits,Total dual credit hours completed in mathematics.,Credits or units of value awarded for the completion of a course.,0,,,,
+Dual Credit Mathematics\rHours Needed,logical compute might required as per metadata,,Remaining dual credit hours needed in mathematics.,,3,,,,Confirmation on metadata description needed
+Dual Credit Other\rMet,dualcredit,dualcredit.dualCreditIndicator,Indicates whether other dual credit requirements (non-ELA/MATH) were met.,Indicates whether the student assigned to the section is to receive dual credit upon successful completion.,N,Y/N,,,
+Dual Credit Other\rHours,courseTranscript,CourseTranscript.EarnedCredits,Total dual credit hours completed in other subject areas.,Credits or units of value awarded for the completion of a course.,0,,,,
+Dual Credit Other\rHours Needed,logical compute might required as per metadata,,Remaining dual credit hours needed in other subject areas.,,9,,,,Confirmation on metadata description needed
+Total College Credit Hours\rTotal,StudentAcademicRecord,CumulativeEarnedCredits,Total number of college credit hours earned across all dual credit courses.,The cumulative number of credits an individual earns by completing courses or examinations during his or her enrollment in the current school as well as those credits transferred from schools in which the individual had been previously enrolled.,,,,,
+StudentNumber,Student,StudentUniqueId,A unique identifier assigned to the student taking the TSIA2 test.,,2,,,,
+TestDate,StudentAssessment,AdministrationDate,The date on which the TSIA2 test was administered to the student.,The date and time an assessment was completed by the student. The use of ISO-8601 formats with a timezone designator (UTC or time offset) is recommended in order to prevent ambiguity due to time zones.,,,,,
+Math,StudentAssessment,ScoreResult,The student’s score in the mathematics section of the TSIA2 test.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",,,,,
+MathDiagnostic,StudentInterventionAssociation,DiagnosticStatement,"The diagnostic score or result from the math section, providing insight into areas of strength or weakness.",A statement provided by the assigner that provides information regarding why the student was assigned to this intervention.,4,,,,
+Elar,StudentAssessment,ScoreResult,The student’s score in the English Language Arts and Reading (ELAR) section of the TSIA2 test.,"A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",924,,,,
+ElarDiagnostic,StudentInterventionAssociation,DiagnosticStatement,"The diagnostic score or result from the ELAR section, highlighting specific strengths or areas needing improvement.",A statement provided by the assigner that provides information regarding why the student was assigned to this intervention.,3,,,,
+Essay,StudentAssessment,ScoreResult,"The student's score on the essay portion of the TSIA2 test, if applicable.","A meaningful score or statistical expression of the performance of an individual. The results can be expressed as a number, percentile, range, level, etc.",4,,,,
+StudentNumber,Student,StudentUniqueId,A unique identifier assigned to the student,A unique alphanumeric code assigned to a student.,1,,,,
+MeningitisDate,StudentHealth,RequiredImmunization.ImmunizationDate,The date on which the student received the meningitis vaccination or provided documentation of vaccination.,"The year, month and day of the related required immunization.",12/12/2018,,,RequiredImmunization.ImmunizationType='Meningococcal',
+SCHOOL_YEAR,Session,schoolYear,"The academic year for the course (e.g., 2024-2025).",The identifier for the school year.,2024-2025,VARCHAR2(9),,,
+SCHOOL_SHORT_YEAR,Session,Need to create custom attribute,"A shortened version of the school year (e.g., 24-25 for 2024-2025).",,2024,NUMBER(38),,,
+START_DATE,Session,BeginDate,The start date of the course.,"Month, day, and year of the first day of the session.",7/1/2024,DATE,,,
+END_DATE,Session,EndDate,The end date of the course.,"Month, day, and year of the last day of the session.",6/30/2025,DATE,,,
+COURSE_NUMBER,Course,CourseCode,A unique identifier for the course within the catalog.,,3,VARCHAR2(9),,,
+COURSE_NAME,Course,CourseTitle,The full name of the course.,,Reading Kn,VARCHAR2(100),,,
+COURSE_SHORT_NAME,Course,Need to create custom attribute,A shortened or abbreviated version of the course name.,,,VARCHAR2(20),,,
+ALTERNATE_NAME,Course,Need to create custom attribute,Any alternate name or alias the course may be known by.,,,VARCHAR2(20),,,
+DESCRIPTITON,Course,Description,A detailed description of the course content and objectives.,,,VARCHAR2(4000),,,
+STATE_NUMBER,Course,CourseIdentificationCode.IdentificationCode,The course identification number as assigned by the state or educational authority.,,2630001,VARCHAR2(11),,CourseIdentificationCode='State course code',
+CREDIT_HOURS,,Needs clarification,The number of credit hours awarded for the completion of the course.,,0,"NUMBER(9,2)",,,
+MAXIMUM_CREDIT_HOURS,Course,MaximumAvailableCredits.Credits,"The maximum number of credit hours a student can earn for the course, if applicable.",,0,"NUMBER(9,2)",,,
+PROGRAM_FOR_ALL_SECTIONS,Course,Need to create custom attribute,Indicates whether the course is part of a larger program applicable to all sections.,,0,VARCHAR2(200),,,
+CREDIT_TYPE,Course,CourseLevelCharacteristic,"The type of credit awarded (e.g., standard, honors, advanced placement).","The type of specific program or designation with which the course is associated (e.g., AP, IB, Dual Credit, CTE).","12,RLA",VARCHAR2(100),,,
+DEFAULT_MAX_ENROLLMENT,Section,Need to create custom attribute,The default maximum number of students allowed in the course.,,25,NUMBER(38),,,
+DEPARTMENT,StaffEducationOrganizationEmploymentAssociation,Department,"The department offering the course (e.g., Mathematics, History).",,,VARCHAR2(100),,,
+SUBJECT_AREA,Course,AcademicSubject,"The subject or academic field the course falls under (e.g., Science, Literature).",The intended major subject/s area of the course.,Eng/Lang Arts,VARCHAR2(100),,,
+COURSE_NOTES,Course,Need to create custom attribute,Additional notes or instructions related to the course.,,Do Not Use Deactivated 07/2021,VARCHAR2(4000),,,
+EXCLUDE_ATTENDANCE,Section,SectionCharacteristic,Indicates whether attendance is excluded from grading for the course.,"This descriptor defines characteristics of a Section, such as whether attendance is taken and the Section is graded.",TRUE,VARCHAR2(25),,,
+EXCLUDE_GRADES,Section,SectionCharacteristic,Indicates whether grades are excluded from the course's evaluation criteria.,"This descriptor defines characteristics of a Section, such as whether attendance is taken and the Section is graded.",FALSE,VARCHAR2(25),,,What are the scenerio for this type of cases to be true where the evaluation is not done based on grades.
+GRADE_SCALE_ID,,Need to create custom attribute,The identifier for the grading scale used in the course.,,1,VARCHAR2(100),,,Will we receive a standard values of grade scale and id that we will be linking this field to?
+GPA_ADDED_VALUE_POINTS,,Need to create custom attribute,Additional points added to the GPA based on the course grading scale.,,0,VARCHAR2(125),,,GPA_ADDED_VALUE_POINTS refers to the extra GPA points added to a student’s grade when they take more rigorous courses
+EXCLUDE_GPA,Course,CourseGPAApplicability,Indicates whether the course grades contribute to the student's GPA.,,FALSE,VARCHAR2(25),,,
+EXCLUDE_CLASS_RANK,,Need to create custom attribute,Indicates whether the course grades are excluded from the calculation of class rank.,,TRUE,VARCHAR2(25),,,
+EXCLUDE_HONOR_ROLL,,Need to create custom attribute,Indicates whether the course grades are excluded from honor roll calculations.,,FALSE,VARCHAR2(25),,,
+DCCCD_COURSE_NUMBER,Course,CourseCode,"The course number assigned by the Dallas County Community College District, if applicable.",,BIOL-1408,VARCHAR2(100),,CourseIdentificationCode='DCCCD',
+FITNESS_ASSESSMENT_FLAG,,Need to create custom attribute,Indicates whether a fitness assessment is required for the course.,,Y,VARCHAR2(100),,,
+INSERT_DATE,Course,DateCourseAdopted,The date the course data was inserted into the system.,Date the course was adopted by the education agency.,4/11/2025,DATE,,,
+INSERT_BY,Course,CourseDefinedBy,The identifier of the person or system that inserted the course data.,,EAD\ETL_SVC,VARCHAR2(50),,,
+GRADE_LOW,,Need to create custom attribute,The minimum grade required for course completion or for achieving a specific grade level.,,0,NUMBER(38),,,
+GRADE_HIGH,,Need to create custom attribute,The maximum grade that can be achieved in the course.,,0,NUMBER(38),,,
+AAR_COURSE_NAME,,Needs clarification,The name of the course as listed in the Automated Academic Records system.,,R,VARCHAR2(150),,,
+AAR_SUBJECT_AREA,,Needs clarification,The subject area associated with the course in the Automated Academic Records system.,,,VARCHAR2(150),,,
+AAR_EXCLUDE,,Needs clarification,Indicates whether the course is excluded from the Automated Academic Records system.,,0,NUMBER(38),,,
+COURSE_SEQUENCE,Section,SequenceOfCourse,The order or sequence of the course in the curriculum.,"When a section is part of a sequence of parts for a course, the number of the sequence. If the course has only one part, the value of this section attribute should be 1.",,VARCHAR2(1),,,
+ACTIVITY_CATEGORY,Section,EducationalEnvironment,"The category of activities associated with the course (e.g., lectures, labs, projects).",,,VARCHAR2(100),,,
+ACTIVITTY_NAME,Section,EducationalEnvironment,"The name of a specific activity within the course (e.g., laboratory, discussion, field trip).",,,VARCHAR2(400),,,
+SCHEDULED,,Needs clarification,Indicates whether the course is scheduled to be offered in a particular term.,,FALSE,VARCHAR2(25),,,
+GRADE_SCALE,CourseTranscript,CourseAttemptResult,"The scale or range of grades used for evaluating the course (e.g., A-F, Pass/Fail).",,Elementary Grade Scale,VARCHAR2(50),,,
+SCHOOL_YEAR,StudentSchoolAssociation,schoolYear,"The academic year during which the student is enrolled (e.g., 2024-2025).",The school year associated with the student's enrollment.,2024-2025,VARCHAR2(9),,,
+SCHOOL_SHORT_YEAR,StudentSchoolAssociation,,"A shortened version of the academic year (e.g., 24-25 for 2024-2025).",The school year associated with the student's enrollment.,2024,NUMBER(38),,Derived from shool year,
+STUDENT_NUMBER,Student,StudentUniqueId,A unique identifier assigned to the student,A unique alphanumeric code assigned to a student.,1,NUMBER(38),,,
+FIRST_NAME,Student,FirstName,The student's given name.,"A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change.",First1,VARCHAR2(50),,,
+LAST_NAME,Student,LastSurname,The student's family/surname.,The name borne in common by members of a family.,Last1,VARCHAR2(50),,,
+MIDDLE_NAME,Student,MiddleName,The student's middle name.,"	A secondary name given to an individual at birth, baptism, or during another naming ceremony.",Middle1,VARCHAR2(50),,,
+FULL_NAME,Student,,"A full name derived from first, middle, and last names.",,"Last1, First1  Middle1",VARCHAR2(150),,FULL_NAME = FIRST_NAME+MIDDLE_NAME+LAST_NAME,does not exist in EdFi
+SCHOOL_NUMBER,School,SchoolId,Unique identifier for the school.,"The identifier assigned to a school. It must be distinct from any other identifier assigned to educational organizations, such as a LocalEducationAgencyId, to prevent duplication.",2,NUMBER(38),,,
+SCHOOL_NAME,EducationOrganization,NameOfInstitution,The name of the school.,"The full, legally accepted name of the institution.",W H Adamson High School,VARCHAR2(100),,,
+PARENT_SCHOOL_NUMBER,LocalEducationAgency,ParentLocalEducationAgency,"The unique identifier for the parent school, typically used for multi-campus districts.","The identifier assigned to a local education agency. It must be distinct from any other identifier assigned to educational organizations, such as a SchoolId, to prevent duplication.",0,NUMBER(38),,,
+PARENT_SCHOOL_NAME,EducationOrganization,,The name of the parent school associated with the student's enrollment.,,,VARCHAR2(100),,,
+COURSE_NAME,Course,CourseTitle,The name of the course the student is enrolled in.,"The descriptive name given to a course of study offered in a school or other institution or organization. In departmentalized classes at the elementary, secondary, and postsecondary levels (and for staff development activities), this refers to the name by which a course is identified (e.g., American History, English III). For elementary and other non-departmentalized classes, it refers to any portion of the instruction for which a grade or report is assigned (e.g., reading, composition, spelling, and language arts)",Lifetime Rec Outdoor Pursuits,VARCHAR2(100),,,
+COURSE_NUMBER,Course,CourseCode,The unique identifier for the course within the catalog.,A unique alphanumeric code assigned to a course.,6571,VARCHAR2(100),,,
+COURSE_START_DATE,Course,StudentSectionAssociation,The start date of the course.,"Month, day, and year of the student's entry or assignment to the section. Note: Date interpretation may vary. Ed-Fi recommends inclusive dates, but states may define dates as inclusive or exclusive. For calculations, align with local guidelines.",1/7/2025,DATE,,,
+COURSE_END_DATE,Course,StudentSectionAssociation,The end date of the course.,"Month, day, and year of the withdrawal or exit of the student from the section. Note: Date interpretation may vary. Ed-Fi recommends inclusive dates, but states may define dates as inclusive or exclusive. For calculations, align with local guidelines.",5/24/2025,DATE,,,
+SECTION_ID,Section,SectionIdentifier,UniqueSectionCode or SectionIdentifier,"A unique identifier for the section, that is defined by the classroom, the subjects taught, and the instructors that are assigned.",36151566,NUMBER(38),,,
+SECTION,Section,SectionName,Name of section,"A locally-defined name for the section, generally created to make the section more recognizable in informal contexts and generally distinct from the SectionIdentifier.",126,VARCHAR2(10),,,
+TEACHER_FIRST_NAME,Staff,FirstName,The first name of the teacher instructing the course.,"A name given to an individual at birth, baptism, or during another naming ceremony, or through legal change.",Teacher_First1,VARCHAR2(50),,Reference from Name,
+TEACHER_LAST_NAME,Staff,LastName,The last name of the teacher instructing the course.,The name borne in common by members of a family.,Teacher_Last1,VARCHAR2(50),,,
+TEACHER_FIRST_LAST_NAME,N/A,,"The full name of the teacher, typically in ""First Last"" format.",,"Teacher_Last1, Teacher_First1",VARCHAR2(150),,TEACHER_FIRST_NAME + TEACHER_LAST_NAME,
+TEACHER_CLASS_ROLE_ID,StaffSectionAssociation,"ClassroomPositionDescriptorId type of position the staff member holds in the specific class/section.
+","The unique identifier for the teacher’s role in the course (e.g., instructor, co-teacher).",,10,NUMBER(38),,,
+TEACHER_CLASS_ROLE,StaffSectionAssociation,Descriptor,"The role the teacher holds in the course (e.g., primary teacher, assistant teacher).",The type of position the staff member holds in the specific class/section.,Lead Teacher,VARCHAR2(100),,will map to Descriptor value of descriptor table,
+TEACHER_LOGIN_ID,Staff,StaffIdentificationCode,The teacher's login identifier for accessing district systems.,"A coding scheme that is used for identification and record-keeping purposes by schools, social services or other agencies to refer to a staff member.",,VARCHAR2(100),,,
+EMPLOYEE_NUMBER,Staff,StaffUniqueId,The unique identifier assigned to the teacher or school employee.,A unique alphanumeric code assigned to a person by a system managing unique identifiers.,,VARCHAR2(20),,,
+MTG_PATTERN_NAME,BellSchedule,BellScheduleName,"The name of the meeting pattern for the course (e.g., daily, bi-weekly).",,The title or name of the bell schedule.,VARCHAR2(80),,,
+PERIOD_CODE,ClassPeriod,ClassPeriodName,"The code identifying the period during which the course is held (e.g., 1st period, 2nd period).","An indication of the portion of a typical daily session in which students receive instruction in a specified subject (e.g., morning, sixth period, block period, or AB schedules).",3,VARCHAR2(10),,,
+ROOM_NUMBER,Location,ClassRoomIdentificationCode,The room number where the course takes place.,"	A unique number or alphanumeric code assigned to a room by a school, school system, state, or other agency or entity",147 Gym,VARCHAR2(10),,,
+TERM_CODE,Session,SessionName        ,"The identifier for the academic term (e.g., Fall 2024, Spring 2025).",The identifier for the calendar for the academic session.,24-25,VARCHAR2(50),,,
+TERM_START_DATE,Session,BeginDate,The start date of the academic term.,"Month, day, and year of the first day of the session. Note: Date interpretation may vary. Ed-Fi recommends inclusive dates, but states may define dates as inclusive or exclusive. For calculations, align with local guidelines.",8/12/2024,DATE,,,
+TERM_END_DATE,Session,EndDate,The end date of the academic term.,"Month, day and year of the last day of the session. Note: Date interpretation may vary. Ed-Fi recommends inclusive dates, but states may define dates as inclusive or exclusive. For calculations, align with local guidelines.",5/23/2025,DATE,,,
+DAY_CYCLE_CODE,N/A,,"The code identifying the school day cycle (e.g., A/B, Block scheduling).",,(A),VARCHAR2(10),,,
+HOME_ROOM,N/A,,The identifier for the student’s homeroom class.,,,VARCHAR2(60),,,
+CREDIT_HOURS,Course,CreditsByCourse,The number of credit hours assigned to the course.,,1,"NUMBER(5,2)",,,
+TEACHER_START_DATE,StaffSectionAssociation,BeginDate,The start date for the teacher’s assignment to the course.,"Month, day, and year of a teacher's assignment to the section. Note: Date interpretation may vary. Ed-Fi recommends inclusive dates, but states may define dates as inclusive or exclusive. For calculations, align with local guidelines.",8/12/2024,DATE,,,
+TEACHER_END_DATE,StaffSectionAssociation,EndDate,The end date for the teacher’s assignment to the course.,"Month, day, and year of the last day of a staff member's assignment to the section. Note: Date interpretation may vary. Ed-Fi recommends inclusive dates, but states may define dates as inclusive or exclusive. For calculations, align with local guidelines.",5/23/2025,DATE,,,
+INSERT_DATE,N/A,,The date when the student schedule data was inserted into the system.,,4/11/2025,DATE,,,
+INSERT_BY,N/A,,The identifier of the person or system responsible for inserting the student schedule data.,,EAD\ETL_SVC,VARCHAR2(50),,,

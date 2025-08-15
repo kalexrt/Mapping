@@ -1,0 +1,21 @@
+Field,Ed-Fi Entity,Ed-Fi Attribute,Description,Sample Data
+Test Start,StudentAssessment,AdministrationDate,Date when the test started,6/3/2025
+Test End,,,Date when the test ended,6/3/2025
+Student ID,Student,StudentUniqueId,Unique student identifier,999999999
+Supplemental Student ID,,,Additional student ID or local/internal ID,10
+First Name,,,Student’s first name,FIRST
+Last Name,,,Student’s last name,LAST
+Birth Date,,,Student’s date of birth,10/19/2007
+Site ID,,,Local ID of the test site or school,012715-001
+Site Name,,,Name of the test site or school,Garland High School
+TSIA2 English Language Arts and Reading College and Career Readiness,,,Score on TSIA2 ELA/Reading CCR section,940
+TSIA2 English Language Arts and Reading Diagnostic,,,Score on TSIA2 ELA/Reading Diagnostic section,4
+Text Analysis and Synthesis,,,Diagnostic subscore: Text Analysis & Synthesis,2-Proficient
+Content Revision and Editing for Conventions,,,Diagnostic subscore: Revision and Grammar,2-Proficient
+TSIA2 Mathematics College and Career Readiness,,,Score on TSIA2 Math CCR section,931
+TSIA2 Mathematics Diagnostic,,,Score on TSIA2 Math Diagnostic section,3
+Quantitative Reasoning,,,Diagnostic subscore: Quantitative Reasoning,1-Basic
+Algebraic Reasoning,,,Diagnostic subscore: Algebraic Reasoning,1-Basic
+Geometric and Spatial Reasoning,,,Diagnostic subscore: Geometry and Spatial Reasoning,1-Basic
+Probabilistic and Statistical Reasoning,,,Diagnostic subscore: Statistics and Probability,1-Basic
+TSIA2 WritePlacer,,,Score on TSIA2 essay writing section,

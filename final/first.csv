@@ -1,0 +1,24 @@
+field,edfi_entity,edfi_attribute
+SID,StudentIdentificationSystemDescriptor,StudentIdentificationSystemDescriptorId
+TX Unique Student ID,Student,TeaId
+Local ID,Student,LocalId
+Last Name,StudentOtherName,LastSurname
+First Name,Student,FirstName
+Grade Level,Grade,CurrentGradeAsOfDate
+Campus,StudentSchoolAssociation,SchoolId
+SAT Test Date,StudentAssessment,AdministrationDate
+Total Score,StudentAssessmentScoreResult,Result
+Evidence-Based Reading and Writing Section Score,StudentAssessmentScoreResult,Result
+Math Test Score,StudentAssessmentScoreResult,Result
+Reading Test Score,StudentAssessmentScoreResult,Result
+Writing and Language Test Score,StudentAssessment,ScoreResult
+Math Test Score (Repeated),StudentAssessment,ScoreResult
+Command of Evidence Sub Score,StudentAssessment,SubScoreResult
+Relevant Words in Context Sub Score,StudentAssessmentScoreResult,Result
+Expression of Ideas Sub Score,StudentAssessmentScoreResult,Result
+Standard English Conventions Sub Score,StudentAssessmentScoreResult,Result
+Heart of Algebra Sub Score,ObjectiveAssessment,MaxRawScore
+Problem Solving and Data Analysis Sub Score,ProgramEvaluationObjective,ObjectiveMaxNumericRating
+Passport to Advanced Mathematics Sub Score,StudentAcademicRecord,CumulativeEarnedCreditConversion
+Analysis in History/Soc Studies Cross-Test Score,StudentAssessmentScoreResult,Result
+Analysis in Science Cross-Test Score,StudentAssessmentScoreResult,Result

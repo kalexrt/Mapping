@@ -1,0 +1,307 @@
+Field,Description,edfi_entity,edfi_attribute,before_vector,vector
+PERSON_ID,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Student,StudentUniqueId,,
+HS_NAME,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",School,NameOfInstitution,,
+ISD,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",EducationOrganization,NameOfInstitution,,
+LAST_NAME,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Student,LastSurname,,
+FIRST_NAME,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Student,FirstName,,
+ADDRESS_LINE1,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Address,StreetNumberName,,
+ADDRESS_LINE2,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Address,ApartmentRoomSuiteNumber,,
+CITY,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Address,City,,
+STATE_CD,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Address,StateAbbreviation,,
+ZIP,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Address,PostalCode,,
+BIRTHDAY,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Student,BirthDate,,
+TERM,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",Session,TermDescriptor,,
+TOT_CRH_AFTER_DROP,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",n/a,n/a,,
+DC_DESCR,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",n/a,n/a,,
+WAIVER?,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",n/a,n/a,,
+LOC_NAME,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",School,NameOfInstitution,,
+HS_INSTITUTION_ID,"0           Unique identifier for the student or person
+1                     Name of the student’s high school
+2                      Independent School District name
+3                                   Student’s last name
+4                                  Student’s first name
+5                                  Primary address line
+6                  Secondary address line (e.g., Apt #)
+7                                     City of residence
+8                                    State abbreviation
+9                               ZIP code of the address
+10                              Student’s date of birth
+11                       Academic term (e.g., semester)
+12                Total credit hours after course drops
+13           Dual credit or college program description
+14    Indicates if a waiver was applied (Y = Yes, N ...
+15                      Campus or location abbreviation
+16                           High school institution ID
+Name: Description, dtype: object",School,SchoolId,,

@@ -1,0 +1,17 @@
+field,edfi_entity,edfi_attribute
+ACT ID,StudentAssessment,StudentAssessmentIdentifier
+Last Name,Student,LastSurname
+First Name,Student,FirstName
+Middle Initial,Student,MiddleName
+Last Updated (CT),StudentAssessment,AdministrationDate
+Test Date,StudentAssessment,AdministrationDate
+DOB,Student,BirthDate
+ACT composite score,StudentAssessmentScoreResult,Result
+ACT math score,StudentAssessmentScoreResult,Result
+ACT science score,StudentAssessmentScoreResult,Result
+ACT STEM score,StudentAssessmentScoreResult,Result
+ACT English score,StudentAssessmentScoreResult,Result
+ACT reading score,StudentAssessmentScoreResult,Result
+State Org Number,EducationOrganization,EducationOrganizationId
+District Org Number,EducationOrganization,EducationOrganizationId
+School Org Number,School,SchoolId

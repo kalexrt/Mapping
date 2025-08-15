@@ -1,0 +1,68 @@
+field,edfi_entity,edfi_attribute
+SID24-25,Student,StudentUniqueId
+Local ID24-25,Student,LocalStudentIdentificationCode
+TX Unique Student ID24-25,Student,StateStudentIdentificationCode
+First Name24-25,Student,FirstName
+Last Name24-25,Student,LastSurname
+Campus24-25,School,NameOfInstitution
+Grade24-25,StudentSchoolAssociation,EntryGradeLevel
+Date of Birth24-25,Student,BirthDate
+Race/Ethnicity24-25,Student,RaceAndEthnicity
+Gender24-25,Student,Sex
+ODS CTE Code24-25,,
+Economically Disadvantaged24-25,StudentCharacteristic,EconomicDisadvantage
+EL (Current & Monitored)+24-25,StudentLanguageInstructionProgramAssociation,EnglishLearnerParticipation
+Special Ed (Current)24-25,StudentSpecialEducationProgramAssociation,SpecialEducationProgramParticipation
+Special Ed (Former)24-25,,
+Continuously Enrolled24-25,,
+Non Continuously Enrolled24-25,,
+High Focus24-25,,
+Highly Mobile24-25,StudentCharacteristic,Mobility
+Foster Care24-25,StudentCharacteristic,FosterCare
+Homeless24-25,StudentCharacteristic,Homeless
+Migratory24-25,StudentCharacteristic,Migrant
+Prelim Cohort Year24-25,,
+Graduation Status24-25,StudentAcademicRecord,GraduationPlan
+CCMR MET24-25,,
+ELA TSIA24-25,,
+ELA TSIA SCORE24-25,Assessment,Score
+ELA TSIA ESSAY SCORE24-25,Assessment,SubScore
+ELA TSIA2 SCORE24-25,Assessment,Score
+ELA TSIA2 ESSAY SCORE24-25,Assessment,SubScore
+ELA TSIA2 DIAG SCORE24-25,StudentAssessment,Score
+ELA ACT24-25,StudentAssessment,WasTestedIndicator
+ELA ACT Test Date24-25,StudentAssessment,AdministrationDate
+ELA ACT SCORE24-25,StudentAssessment,Score
+ELA SAT24-25,StudentAssessment,WasTestedIndicator
+ELA SAT Test Date24-25,StudentAssessment,AdministrationDate
+ELA SAT SCORE24-25,StudentAssessment,Score
+ELA College Prep PEIMS24-25,StudentCourseTranscript,CourseRepeatCode
+ELA Met Excl CP24-25,,
+Met Any ELA TSI Criteria24-25,,
+MATH TSIA24-25,StudentAssessment,WasTestedIndicator
+MATH TSIA SCORE24-25,StudentAssessment,Score
+MATH TSIA2 SCORE24-25,StudentAssessment,Score
+MATH TSIA2 DIAG SCORE24-25,StudentAssessment,Score
+MATH ACT24-25,StudentAssessment,WasTestedIndicator
+MATH ACT Test Date24-25,StudentAssessment,AdministrationDate
+MATH ACT SCORE24-25,StudentAssessment,Score
+MATH SAT24-25,StudentAssessment,WasTestedIndicator
+MATH SAT Test Date24-25,StudentAssessment,AdministrationDate
+MATH SAT SCORE24-25,StudentAssessment,Score
+MATH College Prep PEIMS24-25,StudentCourseTranscript,CourseRepeatCode
+MATH Met Excl CP24-25,,
+Met Any MATH TSI Criteria24-25,,
+Met ELA and MATH Excl CP24-25,,
+TSI Met ELA and MATH24-25,,
+ACT Composite Score24-25,StudentAssessment,Score
+AP IB MET24-25,,
+Dual Credit PEIMS24-25,StudentCourseTranscript,DualCreditOption
+IBC PEIMS 202524-25,StudentCertification,CertificationTitle
+IBC PEIMS 202624-25,StudentCertification,CertificationTitle
+Flagged IBC Only\r24-25,StudentSpecialEducationProgramAssociation,ProgramParticipationStatus
+Level 1 or 2 Cert\r24-25,StudentCertificationExam,CertificationExamLevelType
+Assoc Deg PEIMS\r24-25,StudentAcademicRecord,DegreeType
+OnRamps\r24-25,StudentProgramAssociation,ProgramName
+IEP PEIMS\r24-25,StudentSpecialEducationProgramAssociation,IEPStartDate
+SPED Adv Grad Plan\r24-25,StudentSpecialEducationProgramAssociation,GraduationPlanType
+Military\r24-25,StudentMilitaryStatus,MilitaryStatusType

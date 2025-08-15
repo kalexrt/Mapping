@@ -1,0 +1,21 @@
+field,edfi_entity,edfi_attribute
+SID24-25,StudentUniqueId,StudentUniqueId
+Local ID24-25,Student,StudentIdentificationCode
+TX Unique Student ID24-25,StudentIdentificationCode,IdentificationCode
+First Name24-25,Student,FirstName
+Last Name24-25,Student,LastSurname
+Campus24-25,School,NameOfInstitution
+Grade24-25,StudentSchoolAssociation,EntryGradeLevel
+Date of Birth24-25,Student,BirthDate
+Race/Ethnicity24-25,Student,RacialCategories
+Gender24-25,Student,SexType
+Economically Disadvantaged24-25,Student,EconomicDisadvantaged
+EL (Current & Monitored)+24-25,StudentLanguageInstructionProgramAssociation,EnglishLearnerStatus
+Special Ed (Current)24-25,StudentSpecialEducationProgramAssociation,SpecialEducationStatus
+Continuous Enrolled24-25,,
+High Focus24-25,,
+Foster Care24-25,Student,InFosterCare
+Homeless24-25,StudentHomelessnessIndicator,HomelessIndicator
+Migratory24-25,Student,MigrantEducationProgramParticipation
+Graduation Status24-25,StudentAcademicRecord,GraduationPlanType
+ACT Composite Score24-25,StudentAssessment,Score

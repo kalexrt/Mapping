@@ -1,0 +1,21 @@
+Field,Ed-Fi Entity,Ed-Fi Attribute
+test start,StudentAssessment,AdministrationDate
+test end,,
+student id,Student,StudentUniqueId
+supplemental student id,,
+first name,Student,FirstName
+last name,Student,LastSurname
+birth date,Student,BirthDate
+site id,School,SchoolId
+site name,EducationOrganization,NameOfInstitution
+tsia2 english language arts and reading college and career readiness,StudentAssessment,ScoreResult
+tsia2 english language arts and reading diagnostic,StudentAssessment,ScoreResult
+text analysis and synthesis,,
+content revision and editing for conventions,,
+tsia2 mathematics college and career readiness,StudentAssessment,ScoreResult
+tsia2 mathematics diagnostic,StudentAssessment,ScoreResult
+quantitative reasoning,,
+algebraic reasoning,,
+geometric and spatial reasoning,,
+probabilistic and statistical reasoning,,
+tsia2 writeplacer,StudentAssessment,ScoreResult
